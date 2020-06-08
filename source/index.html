@@ -6,6 +6,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
-  <body>
+  <body class="page" id="top">
+    <header class="header">
+      <a class="header__toggle header__toggle--hidden" href="#menu">
+        <span class="header__toggle-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+        <span class="header__toggle-text">Меню</span>
+      </a>
+      <nav class="menu menu--shown header__menu" id="menu">
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a class="menu__link" href="#top">Главная</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#classes">Направления</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#coaches">Преподаватели</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#abonements">Абонементы</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#schedule">Расписание</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#reviews">Отзывы</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#contacts">Контакты</a>
+          </li>
+        </ul>
+        <button class="button-close menu__close" type="button">
+          <span class="visually-hidden">Закрыть меню</span>
+        </button>
+      </nav>
+      <a class="logo header__logo">
+        <picture>
+          <source srcset="img/logo-tablet.webp" media="(min-width: 768px)" type="image/webp">
+          <source srcset="img/logo-mobile.webp" type="image/webp">
+          <source srcset="img/logo-tablet.png" media="(min-width: 768px)">
+          <source srcset="img/logo-mobile.png">
+          <img src="img/logo-tablet.png" alt="Логотип Центра йоги Lotos" width="49" height="30">
+        </picture>
+      </a>
+      <a class="header__phone" href="tel:+78123455697">+7 (812) 345-56-97</a>
+      <div class="pagination-page header__pagination">
+        <span class="pagination-page__current">01</span>
+        <span class="pagination-page__total">09</span>
+      </div>
+      <ul class="social header__social">
+        <li class="social__item">
+          <a class="social__link" href="https://vk.com" target="_blank">VK</a>
+        </li>
+        <li class="social__item">
+          <a class="social__link" href="https://www.facebook.com" target="_blank">FB</a>
+        </li>
+        <li class="social__item">
+          <a class="social__link" href="https://www.instagram.com" target="_blank">INST</a>
+        </li>
+      </ul>
+      <a class="button-arrow button-arrow--up header__scroll" href="#top">
+        <span>Вернуться</span>
+      </a>
+    </header>
   </body>
 </html>
