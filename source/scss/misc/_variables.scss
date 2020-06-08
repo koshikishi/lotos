@@ -1,6 +1,52 @@
+// Задаём цвета сайта
+$colorWhite: #ffffff;
+$colorBlack: #000000;
+
+$colorPrimary: #f78e6a;
+$colorSecondary: #fc66a2;
+
+$colorBackground: #fbf5f4;
+
+$gradientVertical: linear-gradient($colorSecondary, $colorPrimary);
+$gradientVerticalInverse: linear-gradient($colorPrimary, $colorSecondary);
+$gradientHorizontal: linear-gradient(90deg, $colorPrimary, $colorSecondary);
+
 // Задаём характеристики шрифта и текста
 $fontWeightExtraLight: 200;
 $fontWeightLight: 300;
 $fontWeightNormal: 400;
 $fontWeightMedium: 500;
 $fontWeightBold: 700;
+
+$fontSizeTextMobile: 16px;
+$fontSizeTextDesktop: 18px;
+$fontSizeTextTiny: 12px;
+$fontSizeTextSmall: 14px;
+$fontSizeTextLarge: 20px;
+$fontSizeTextHuge: 24px;
+$fontSizeTextSocial: 10px;
+
+$fontSizeTitleMobile: 40px;
+$fontSizeTitleDesktop: 48px;
+$fontSizeTitleSmall: 30px;
+$fontSizeTitleLarge: 72px;
+$fontSizeTitleHuge: 80px;
+$fontSizeTitleHeroMobile: 130px;
+$fontSizeTitleHeroTablet: 150px;
+$fontSizeTitleHeroDesktop: 200px;
+
+$lineHeightNormal: 1.2;
+
+$lineHeightTextTiny: 20px;
+$lineHeightTextSmall: 25px;
+$lineHeightTextLarge: 30px;
+$lineHeightTextHuge: 35px;
+
+$lineHeightTitleSmall: 40px;
+$lineHeightTitleLarge: 50px;
+$lineHeightTitleHuge: 54px;
+
+$fontFamily: "Geometria", "Arial", sans-serif;
+$fontFamilyAlt: "Montserrat", "Arial", sans-serif;
+
+$letterSpacing: -0.05em;
