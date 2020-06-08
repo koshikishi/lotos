@@ -1,0 +1,14 @@
+// Подключаем Normalize
+@import "normalize";
+
+// Подключаем переменные, функции и миксины
+@import "misc/variables", "misc/functions", "misc/mixins";
+
+// Подключаем шрифты
+@import "misc/fonts";
+
+// Подключаем шаблонные и вспомогательные классы
+@import "misc/extends", "blocks/visually-hidden";
+
+// Подключаем основные стили
+@import "misc/base";
