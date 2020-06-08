@@ -1,0 +1,27 @@
+// Выводит правило font-face для подключения шрифта с указанными параметрами
+@mixin font-face($family, $weightName, $weight: $fontWeightNormal, $style: normal, $woff2: true) {
+  $fontName: $family;
+  $fontNameSecond: spaceless($family);
+
+  @if $style == normal {
+    $fontName: $fontName + " " + $weightName;
+    $fontNameSecond: $fontNameSecond + "-" + $weightName;
+  } @else if $weight == 400 {
+    $fontName: $fontName + " " + capitalize($style);
+    $fontNameSecond: $fontNameSecond + "-" + capitalize($style);
+  } @else {
+    $fontName: $fontName + " " + $weightName + " " + capitalize($style);
+    $fontNameSecond: $fontNameSecond + "-" + $weightName + capitalize($style);
+  }
+
+  @font-face {
+    font-style: $style;
+    font-weight: $weight;
+    font-family: $family;
+    font-display: swap;
+    src: local($fontName),
+         local($fontNameSecond),
+         if($woff2, url("../fonts/#{to-lower-case($fontNameSecond)}.woff2") format("woff2"), null),
+         url("../fonts/#{to-lower-case($fontNameSecond)}.woff") format("woff");
+  }
+}
