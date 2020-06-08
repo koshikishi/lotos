@@ -679,6 +679,44 @@
           </div>
         </div>
       </section>
+      <section class="section contacts" id="contacts">
+        <h2 class="section__title">Контакты</h2>
+        <div class="contacts__wrapper">
+          <div class="contacts__map"></div>
+          <address class="contacts__content">
+            <dl class="contacts__list">
+              <dt class="contacts__list-title">Адрес:</dt>
+              <dd class="contacts__list-info">СПб, Невский проспект 108</dd>
+              <dt class="contacts__list-title">Email:</dt>
+              <dd class="contacts__list-info">
+                <a href="mailto:Lotos-yoga@gmail.com">Lotos-yoga@gmail.com</a>
+              </dd>
+            </dl>
+            <div class="contacts__links">
+              <a class="contacts__link contacts__link--location" href="https://yandex.ru/maps/-/CCQd6FA~tD" target="_blank">Смотреть на карте</a>
+              <a class="contacts__link contacts__link--envelope" href="#feedback">Оставить отзыв</a>
+            </div>
+            <small class="contacts__copyright">© 2018 — ООО “Центр йоги Лотос”</small>
+            <a class="button button--plus contacts__button" href="#!">
+              <span>Записаться онлайн</span>
+            </a>
+          </address>
+          <div class="modal modal--hidden contacts__modal" id="feedback">
+            <b class="modal__title">Для нас очень важно ваше мнение</b>
+            <form class="form form--modal modal__form" action="#" method="post">
+              <input class="form__input" type="text" name="name" placeholder="Ваше имя" aria-label="Ваше имя">
+              <textarea class="form__message" name="message" placeholder="Ваш отзыв" aria-label="Ваш отзыв"></textarea>
+              <button class="button button--envelope form__button" type="submit">
+                <span>Отправить отзыв</span>
+              </button>
+              <small class="form__consent">Нажимая «Отправить отзыв», вы даете <a href="#!">согласие</a> на&nbsp;обработку своих персональных данных</small>
+            </form>
+            <button class="button-close button-close--round modal__close" type="button">
+              <span class="visually-hidden">Закрыть</span>
+            </button>
+          </div>
+        </div>
+      </section>
     </main>
   </body>
 </html>
