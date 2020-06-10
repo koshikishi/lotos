@@ -10,5 +10,11 @@
 // Подключаем шаблонные и вспомогательные классы
 @import "misc/extends", "blocks/visually-hidden";
 
+// Подключаем анимацию
+@import "misc/animations";
+
 // Подключаем основные стили
-@import "misc/base", "blocks/page";
+@import "misc/base", "blocks/page", "blocks/button-arrow", "blocks/button-close";
+
+// Подключаем стили шапки
+@import "blocks/header", "blocks/menu", "blocks/logo", "blocks/pagination-page", "blocks/social";

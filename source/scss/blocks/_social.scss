@@ -1,0 +1,39 @@
+.social {
+  @extend %list-reset;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 50vw;
+  max-width: 200px;
+
+  @media (min-width: 768px) {
+    max-width: 400px;
+  }
+
+  @media (min-width: 1920px) {
+    justify-content: flex-start;
+  }
+}
+
+.social__item {
+  margin-right: 14px;
+  margin-left: 14px;
+}
+
+.social__link {
+  font: #{$fontSizeTextSocial}/#{$lineHeightNormal} $fontFamilyAlt;
+  color: inherit;
+  text-transform: uppercase;
+  transition-duration: 0.3s;
+  transition-property: color, opacity;
+
+  &:hover,
+  &:focus {
+    color: $colorPrimary;
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+}

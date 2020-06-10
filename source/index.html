@@ -12,16 +12,11 @@
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body class="page" id="top">
+    <div class="visually-hidden">
+      <include src="build/img/sprite.svg"></include>
+    </div>
     <header class="header">
-      <a class="header__toggle header__toggle--hidden" href="#menu">
-        <span class="header__toggle-icon">
-          <span></span>
-          <span></span>
-          <span></span>
-        </span>
-        <span class="header__toggle-text">Меню</span>
-      </a>
-      <nav class="menu menu--shown header__menu" id="menu">
+      <nav class="menu header__menu" id="menu">
         <ul class="menu__list">
           <li class="menu__item">
             <a class="menu__link" href="#top">Главная</a>
@@ -49,6 +44,14 @@
           <span class="visually-hidden">Закрыть меню</span>
         </button>
       </nav>
+      <a class="header__toggle" href="#menu">
+        <span class="header__toggle-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+        <span class="header__toggle-text">Меню</span>
+      </a>
       <a class="logo header__logo">
         <picture>
           <source srcset="img/logo-tablet.webp" media="(min-width: 768px)" type="image/webp">
@@ -75,6 +78,7 @@
         </li>
       </ul>
       <a class="button-arrow button-arrow--up header__scroll" href="#top">
+        <svg width="6" height="6" viewBox="0 0 6 6"><use href="#icon-triangle"></use></svg>
         <span>Вернуться</span>
       </a>
     </header>

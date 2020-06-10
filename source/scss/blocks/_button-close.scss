@@ -1,0 +1,44 @@
+.button-close {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  background: none;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30px;
+    height: 2px;
+    background-color: $colorPrimary;
+    transition: width 0.3s;
+  }
+
+  &::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  &::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+    transform: rotate(90deg);
+    transition: transform 0.3s;
+  }
+
+  &:active {
+    &::before,
+    &::after {
+      width: 26px;
+    }
+  }
+}

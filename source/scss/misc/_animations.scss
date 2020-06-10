@@ -1,0 +1,25 @@
+@keyframes menu-toggle {
+  0% {
+    transform: translateX(0);
+  }
+
+  99% {
+    visibility: visible;
+    transform: translateX(calc(-100% - 100px));
+  }
+
+  100% {
+    visibility: hidden;
+    transform: translateX(calc(-100% - 100px));
+  }
+}
+
+@keyframes header-menu {
+  from {
+    transform: translateX(-150%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
