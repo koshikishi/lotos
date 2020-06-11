@@ -9,3 +9,8 @@
     font-size: $fontSizeTextDesktop;
   }
 }
+
+.page__header {
+  position: relative;
+  z-index: 1;
+}

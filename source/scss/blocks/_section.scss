@@ -1,0 +1,44 @@
+.section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+
+  .no-js & {
+    min-height: 100vh;
+  }
+
+  .js & {
+    height: 100vh;
+    overflow: auto;
+  }
+}
+
+.section__title {
+  position: absolute;
+  top: 68px;
+  left: 50%;
+  display: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 16px;
+  font-weight: $fontWeightNormal;
+  font-size: $fontSizeTextDesktop;
+  line-height: $lineHeightNormal;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 0;
+    width: 6px;
+    height: 6px;
+    background-color: $colorPrimary;
+    border-radius: 50%;
+  }
+
+  @media (min-width: 1920px) {
+    display: block;
+  }
+}
