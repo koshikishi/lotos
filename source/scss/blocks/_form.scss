@@ -1,0 +1,57 @@
+.form__input {
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 24px;
+  padding: 10px 0;
+  font: inherit;
+  font-size: $fontSizeTextMobile;
+  color: inherit;
+  background: none;
+  border: none;
+  border-bottom: 1px solid rgba($colorBlack, 0.2);
+  transition: border-bottom-color 0.3s;
+
+  &::placeholder {
+    color: rgba($colorBlack, 0.6);
+    opacity: 1;
+  }
+
+  &:hover,
+  &:focus {
+    border-bottom-color: rgba($colorBlack, 0.5);
+    outline: none;
+  }
+}
+
+.form__button {
+  margin-top: 18px;
+  margin-bottom: 26px;
+
+  @media (min-width: 768px) {
+    margin-top: 28px;
+  }
+}
+
+.form__consent {
+  display: block;
+  width: 335px;
+  font-weight: $fontWeightExtraLight;
+  font-size: $fontSizeTextTiny;
+  line-height: $lineHeightTextTiny;
+
+  a {
+    color: inherit;
+    text-decoration: underline;
+    transition: opacity 0.3s;
+
+    &:hover,
+    &:focus {
+      outline: none;
+      opacity: 0.5;
+    }
+
+    &:active {
+      opacity: 0.8;
+    }
+  }
+}

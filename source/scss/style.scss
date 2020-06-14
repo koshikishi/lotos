@@ -24,3 +24,6 @@
 
 // Подключаем стили блока направлений
 @import "blocks/classes";
+
+// Подключаем стили блока акции
+@import "blocks/entry", "blocks/form";

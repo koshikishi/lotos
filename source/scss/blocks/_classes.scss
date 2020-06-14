@@ -29,8 +29,6 @@
 .classes__wrapper {
   @extend %container;
   position: relative;
-  display: flex;
-  flex-direction: column;
 }
 
 .classes__list {
