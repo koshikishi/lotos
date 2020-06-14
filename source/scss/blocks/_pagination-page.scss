@@ -47,7 +47,8 @@
   }
 
   @media (min-width: 768px) {
-    padding-left: 3px;
+    align-self: flex-end;
+    padding-right: 4px;
     font-size: $fontSizeTitleSmall;
   }
 }

@@ -1,0 +1,145 @@
+.classes {
+  @media (min-width: 768px) {
+    background: calc(50% + 246px) calc(50% + 173px) no-repeat;
+
+    .no-js &,
+    .no-webp & {
+      background-image: url("../img/classes_bg-tablet.png");
+    }
+
+    .webp & {
+      background-image: url("../img/classes_bg-tablet.webp");
+    }
+  }
+
+  @media (min-width: 1920px) {
+    background-position: calc(50% - 291px) calc(50% + 6px);
+
+    .no-js &,
+    .no-webp & {
+      background-image: url("../img/classes_bg-desktop.png");
+    }
+
+    .webp & {
+      background-image: url("../img/classes_bg-desktop.webp");
+    }
+  }
+}
+
+.classes__wrapper {
+  @extend %container;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.classes__list {
+  display: flex;
+  width: 100%;
+  padding-top: 124px;
+  padding-bottom: 90px;
+
+  @media (min-width: 768px) {
+    padding-top: 120px;
+  }
+
+  @media (min-width: 1920px) {
+    padding-top: 150px;
+  }
+}
+
+.classes__item {
+  width: 100%;
+
+  &:not(:first-child) {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    padding-right: 268px;
+  }
+
+  @media (min-width: 1920px) {
+    padding-right: 370px;
+    padding-left: 870px;
+  }
+}
+
+.classes__title {
+  margin-top: 0;
+  margin-bottom: 45px;
+  font-weight: $fontWeightNormal;
+  font-size: $fontSizeTextHuge;
+  line-height: $lineHeightNormal;
+
+  span {
+    display: block;
+    margin-bottom: 12px;
+    font-size: $fontSizeTitleDesktop;
+    color: $colorPrimary;
+
+    @supports (background-clip: text) {
+      color: transparent;
+      background: $gradientVerticalInverse $colorPrimary;
+      background-clip: text;
+    }
+  }
+
+  @media (min-width: 768px) {
+    margin-bottom: 43px;
+  }
+}
+
+.classes__text {
+  max-height: 262px;
+  margin-bottom: 50px;
+  overflow: auto;
+
+  p {
+    margin-top: 0;
+    margin-bottom: 22px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (min-width: 768px) {
+    max-height: none;
+    margin-bottom: 49px;
+    line-height: $lineHeightTextHuge;
+
+    p {
+      margin-bottom: 18px;
+    }
+  }
+
+  @media (min-width: 1920px) {
+    margin-bottom: 48px;
+  }
+}
+
+.classes__nav-buttons {
+  position: absolute;
+  top: 161px;
+  right: 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 70px;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.classes__pagination {
+  position: absolute;
+  top: 153px;
+  right: 30px;
+
+  @media (min-width: 1920px) {
+    top: 222px;
+    right: auto;
+    left: 249px;
+  }
+}

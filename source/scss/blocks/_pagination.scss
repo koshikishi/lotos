@@ -1,0 +1,62 @@
+.pagination {
+  display: none;
+
+  @media (min-width: 768px) {
+    display: block;
+  }
+}
+
+.pagination__button {
+  position: relative;
+  display: block;
+  margin-bottom: 13px;
+  padding: 0;
+  font-weight: $fontWeightNormal;
+  font-size: $fontSizeTextDesktop;
+  line-height: $lineHeightTextLarge;
+  color: inherit;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  background: none;
+  border: none;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity 0.3s;
+
+  &--active {
+    &::before {
+      content: attr(data-text) " —";
+      position: absolute;
+      top: 0;
+      left: -8px;
+      font-weight: $fontWeightMedium;
+      color: $colorPrimary;
+      transform: translateX(-100%);
+
+      @supports (background-clip: text) {
+        color: transparent;
+        background: $gradientVertical $colorPrimary;
+        background-clip: text;
+
+        .pagination--inverse & {
+          background-image: $gradientVerticalInverse $colorPrimary;
+        }
+      }
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &--active,
+  &:hover,
+  &:focus {
+    outline: none;
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+}

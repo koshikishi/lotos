@@ -14,10 +14,13 @@
 @import "misc/animations";
 
 // Подключаем основные стили
-@import "misc/base", "blocks/page", "blocks/section", "blocks/button-arrow", "blocks/button-close";
+@import "misc/base", "blocks/page", "blocks/section", "blocks/button", "blocks/button-arrow", "blocks/button-close", "blocks/pagination";
 
 // Подключаем стили шапки
 @import "blocks/header", "blocks/menu", "blocks/logo", "blocks/pagination-page", "blocks/social";
 
 // Подключаем стили hero-блока
 @import "blocks/hero";
+
+// Подключаем стили блока направлений
+@import "blocks/classes";
