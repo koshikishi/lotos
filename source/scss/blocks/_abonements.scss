@@ -1,0 +1,164 @@
+.abonements {
+  @media (min-width: 768px) {
+    background: calc(50% + 206px) no-repeat;
+
+    .no-js &,
+    .no-webp & {
+      background-image: url("../img/abonements_bg-tablet.png");
+    }
+
+    .webp & {
+      background-image: url("../img/abonements_bg-tablet.webp");
+    }
+  }
+
+  @media (min-width: 1920px) {
+    background-position: calc(50% - 425px) calc(50% - 13px);
+
+    .no-js &,
+    .no-webp & {
+      background-image: url("../img/abonements_bg-desktop.png");
+    }
+
+    .webp & {
+      background-image: url("../img/abonements_bg-desktop.webp");
+    }
+  }
+}
+
+.abonements__wrapper {
+  @extend %container;
+  display: flex;
+
+  @media (max-width: 767px) {
+    max-width: 604px;
+  }
+}
+
+.abonements__form {
+  margin-top: auto;
+  margin-bottom: auto;
+  padding-top: 90px;
+  padding-bottom: 90px;
+
+  @media (min-width: 1920px) {
+    padding-top: 27px;
+    padding-bottom: 100px;
+    padding-left: 870px;
+  }
+}
+
+.abonements__fields {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 564px;
+  margin-bottom: 40px;
+
+  @supports (display: grid) {
+    display: grid;
+    grid-template-columns: repeat(2, 280px);
+    gap: 4px;
+  }
+
+  @media (min-width: 768px) {
+    margin-bottom: 60px;
+  }
+}
+
+.abonements__field {
+  width: 280px;
+  height: 140px;
+  margin-bottom: 4px;
+  background-color: $colorWhite;
+
+  &:nth-last-child(-n+2) {
+    margin-bottom: 0;
+  }
+
+  @supports (display: grid) {
+    margin-bottom: 0;
+  }
+}
+
+.abonements__label {
+  position: relative;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  padding: 28px 80px 32px 40px;
+  font-size: $fontSizeTextDesktop;
+  line-height: $lineHeightTitleSmall;
+  cursor: pointer;
+  transition: box-shadow 0.3s;
+  user-select: none;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transform: translateY(-50%);
+  }
+
+  &::before {
+    background-color: $colorBackground;
+  }
+
+  &::after {
+    background-image: $gradientHorizontal;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  svg {
+    position: absolute;
+    top: 50%;
+    right: 34px;
+    z-index: 1;
+    width: 12px;
+    height: 12px;
+    transform: translateY(-50%);
+    transition: fill 0.3s;
+    fill: rgba($colorBlack, 0.2);
+  }
+
+  b {
+    font-weight: $fontWeightBold;
+    font-size: $fontSizeTextHuge;
+    line-height: $lineHeightNormal;
+    color: $colorPrimary;
+    white-space: nowrap;
+
+    @supports (background-clip: text) {
+      color: transparent;
+      background: $gradientVertical $colorPrimary;
+      background-clip: text;
+    }
+  }
+
+  &:hover,
+  input:focus + & {
+    z-index: 1;
+    outline: none;
+    box-shadow: 0 0 30px rgba($colorBlack, 0.1);
+  }
+
+  &:active {
+    box-shadow: none;
+  }
+
+  input:checked + & {
+    &::after {
+      opacity: 1;
+    }
+
+    svg {
+      fill: $colorWhite;
+    }
+  }
+}
