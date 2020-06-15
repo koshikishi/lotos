@@ -77,7 +77,6 @@
 
   &--right {
     svg {
-      top: 12px;
       right: 11px;
       transform: rotate(90deg) scaleY(-1);
     }
@@ -85,7 +84,6 @@
 
   &--left {
     svg {
-      top: 12px;
       right: 13px;
       transform: rotate(90deg);
     }
@@ -93,6 +91,12 @@
 
   &--right,
   &--left {
+    pointer-events: auto;
+
+    svg {
+      top: 12px;
+    }
+
     &:hover,
     &:focus {
       svg {

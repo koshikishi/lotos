@@ -1,0 +1,148 @@
+.coaches__wrapper {
+  @extend %container;
+  position: relative;
+}
+
+.coaches__list {
+  display: flex;
+  width: 100%;
+  padding-bottom: 90px;
+
+  @media (min-width: 768px) {
+    padding-top: 120px;
+  }
+
+  @media (min-width: 1920px) {
+    padding-top: 150px;
+  }
+}
+
+.coaches__item {
+  position: relative;
+  width: 100%;
+  padding-top: 321px;
+
+  &:not(:first-child) {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    position: static;
+    padding-top: 0;
+    padding-right: 271px;
+  }
+
+  @media (min-width: 1920px) {
+    padding-right: 400px;
+    padding-left: 870px;
+  }
+}
+
+.coaches__image {
+  img {
+    position: absolute;
+    top: -2px;
+    right: 50%;
+    width: 146px;
+    height: 300px;
+    transform: translateX(50%);
+
+    @media (min-width: 768px) {
+      top: auto;
+      right: 59px;
+      bottom: calc(50% - 426px);
+      width: 244px;
+      height: 500px;
+      transform: none;
+    }
+
+    @media (min-width: 1920px) {
+      top: calc(50% - 399px);
+      right: auto;
+      bottom: auto;
+      left: 460px;
+      width: 397px;
+      height: 803px;
+    }
+  }
+}
+
+.coaches__title {
+  margin-top: 0;
+  margin-bottom: 6px;
+  font-weight: $fontWeightNormal;
+  font-size: $fontSizeTitleMobile;
+  line-height: $lineHeightNormal;
+
+  @media (min-width: 768px) {
+    margin-bottom: 12px;
+    font-size: $fontSizeTitleDesktop;
+  }
+}
+
+.coaches__subtitle {
+  margin-top: 0;
+  margin-bottom: 27px;
+  font-weight: $fontWeightNormal;
+  font-size: $fontSizeTextDesktop;
+  line-height: $lineHeightNormal;
+
+  @media (min-width: 768px) {
+    margin-bottom: 45px;
+    font-size: $fontSizeTextHuge;
+  }
+}
+
+.coaches__text {
+  margin-bottom: 30px;
+
+  p {
+    margin-top: 0;
+    margin-bottom: 23px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 767px) {
+      &:not(:first-of-type) {
+        display: none;
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    margin-bottom: 52px;
+  }
+
+  @media (min-width: 1920px) {
+    margin-bottom: 51px;
+  }
+}
+
+.coaches__nav-buttons {
+  position: absolute;
+  top: 153px;
+  right: 20px;
+  left: 20px;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+
+.coaches__pagination {
+  position: absolute;
+  top: 153px;
+  right: 30px;
+
+  @media (min-width: 1920px) {
+    top: 222px;
+    right: auto;
+    left: 249px;
+  }
+}
