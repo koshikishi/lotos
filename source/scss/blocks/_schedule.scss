@@ -1,0 +1,181 @@
+.schedule__wrapper {
+  @extend %container;
+  display: flex;
+  max-width: 1920px;
+}
+
+.schedule__table {
+  display: flex;
+  width: 1419px;
+  margin: auto;
+  padding-top: 75px;
+  padding-bottom: 75px;
+
+  table {
+    height: 100%;
+    border-collapse: collapse;
+    font-size: $fontSizeTextSmall;
+    line-height: $lineHeightNormal;
+    text-align: center;
+  }
+
+  tr {
+    border-bottom: 2px solid transparent;
+  }
+
+  tbody {
+    tr {
+      &:last-of-type {
+        border-bottom: none;
+      }
+    }
+  }
+
+  th,
+  td {
+    width: 201px;
+    height: 76px;
+    padding: 0;
+    vertical-align: middle;
+    background: padding-box $colorWhite;
+    border-right: 2px solid transparent;
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+
+  th {
+    font-weight: $fontWeightBold;
+    color: $colorPrimary;
+  }
+
+  @media (min-width: 768px) {
+    padding-top: 140px;
+    padding-bottom: 140px;
+  }
+
+  @media (min-width: 1920px) {
+    padding-top: 90px;
+    padding-bottom: 90px;
+  }
+}
+
+.schedule__table-left {
+  width: 201px;
+  border-right: 2px solid transparent;
+
+  th {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: -32px;
+      bottom: 0;
+      width: 30px;
+      background-image: linear-gradient(90deg, $colorWhite, transparent);
+      opacity: 0;
+      transition: opacity 0.3s;
+      pointer-events: none;
+
+      .schedule__table--swiped & {
+        opacity: 1;
+      }
+    }
+  }
+
+  .schedule__download {
+    font-weight: $fontWeightLight;
+    text-align: left;
+    color: $colorBlack;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-image: $gradientVertical;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    @each $state in hover, focus-within {
+      &:#{$state} {
+        &::before {
+          opacity: 1;
+        }
+      }
+    }
+
+    a {
+      position: relative;
+      display: table-cell;
+      height: 76px;
+      padding-left: 80px;
+      vertical-align: inherit;
+      color: inherit;
+      transition: color 0.3s;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 31px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        transform: translateY(-50%);
+      }
+
+      &::before {
+        background-color: $colorWhite;
+        transition: transform 0.3s;
+      }
+
+      &::after {
+        background-image: $gradientVertical;
+        transition: opacity 0.3s;
+      }
+
+      svg {
+        position: absolute;
+        top: 50%;
+        left: 41px;
+        z-index: 1;
+        width: 10px;
+        height: 12px;
+        transform: translateY(-50%);
+        fill: $colorWhite;
+      }
+
+      &:hover,
+      &:focus {
+        color: $colorWhite;
+        outline: none;
+
+        &::after {
+          opacity: 0;
+        }
+
+        svg {
+          fill: url("#gradientVertical") $colorWhite;
+        }
+      }
+
+      &:active {
+        &::before {
+          transform: translateY(-50%) scale(0.9);
+        }
+      }
+    }
+  }
+}
+
+.schedule__table-main {
+  width: 1216px;
+}
