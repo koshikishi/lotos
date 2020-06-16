@@ -1,0 +1,23 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  background-color: $colorBackground;
+  opacity: 0.8;
+
+  &--shown {
+    display: block;
+  }
+
+  .modal:target + & {
+    display: block;
+    opacity: 1;
+  }
+
+  @media (min-width: 1920px) {
+    display: none;
+  }
+}

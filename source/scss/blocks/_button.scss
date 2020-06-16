@@ -66,4 +66,16 @@
   &:active {
     box-shadow: none;
   }
+
+  .form--modal & {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+
+    @media (min-width: 768px) {
+      display: inline-block;
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
 }

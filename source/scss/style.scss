@@ -8,7 +8,7 @@
 @import "misc/fonts";
 
 // Подключаем шаблонные и вспомогательные классы
-@import "misc/extends", "blocks/visually-hidden";
+@import "misc/extends", "blocks/visually-hidden", "blocks/overlay";
 
 // Подключаем анимацию
 @import "misc/animations";
@@ -39,3 +39,6 @@
 
 // Подключаем стили блока отзывов
 @import "blocks/reviews";
+
+// Подключаем стили блока контактов
+@import "blocks/contacts", "blocks/modal";

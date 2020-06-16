@@ -1,4 +1,5 @@
-.form__input {
+.form__input,
+.form__message {
   box-sizing: border-box;
   width: 100%;
   margin-bottom: 24px;
@@ -23,12 +24,25 @@
   }
 }
 
+.form__message {
+  height: 151px;
+  resize: none;
+}
+
 .form__button {
   margin-top: 18px;
   margin-bottom: 26px;
 
+  .form--modal & {
+    margin-top: 6px;
+  }
+
   @media (min-width: 768px) {
     margin-top: 28px;
+
+    .form--modal & {
+      margin-top: 16px;
+    }
   }
 }
 
@@ -38,6 +52,14 @@
   font-weight: $fontWeightExtraLight;
   font-size: $fontSizeTextTiny;
   line-height: $lineHeightTextTiny;
+
+  .form--modal & {
+    text-align: center;
+
+    @media (min-width: 768px) {
+      text-align: left;
+    }
+  }
 
   a {
     color: inherit;
