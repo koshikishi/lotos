@@ -84,6 +84,9 @@ const classesSwiper = new Swiper(`.classes__wrapper`, new SwiperOptions(document
 // Оживление слайдера тренеров
 const coachesSwiper = new Swiper(`.coaches__wrapper`, new SwiperOptions(document.querySelectorAll(`.coaches .pagination__button`)));
 
+// Оживление слайдера отзывов
+const reviewsSwiper = new Swiper(`.reviews__wrapper`, new SwiperOptions(document.querySelectorAll(`.reviews .pagination__button`)));
+
 /* -----------------------
   Пользовательские функции
   ------------------------ */

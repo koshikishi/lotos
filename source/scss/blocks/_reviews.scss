@@ -37,6 +37,11 @@
   padding-top: 92px;
   padding-bottom: 90px;
 
+  .no-js & {
+    height: auto;
+    overflow: auto;
+  }
+
   @media (min-width: 768px) {
     padding-top: 130px;
   }
@@ -47,11 +52,8 @@
 }
 
 .reviews__item {
+  box-sizing: border-box;
   width: 100%;
-
-  &:not(:first-child) {
-    display: none;
-  }
 
   @media (min-width: 768px) {
     padding-right: 238px;
@@ -184,9 +186,14 @@
   position: absolute;
   top: 242px;
   right: 20px;
+  z-index: 1;
   display: flex;
   justify-content: space-between;
   width: 70px;
+
+  .no-js & {
+    display: none;
+  }
 
   @media (min-width: 768px) {
     display: none;
@@ -197,10 +204,20 @@
   position: absolute;
   top: 153px;
   right: 30px;
+  z-index: 1;
+
+  .js & {
+    bottom: auto;
+    left: auto;
+    width: auto;
+  }
 
   @media (min-width: 1920px) {
     top: 222px;
     right: auto;
-    left: 249px;
+
+    .js & {
+      left: 249px;
+    }
   }
 }
