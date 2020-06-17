@@ -87,6 +87,23 @@ const coachesSwiper = new Swiper(`.coaches__wrapper`, new SwiperOptions(document
 // Оживление слайдера отзывов
 const reviewsSwiper = new Swiper(`.reviews__wrapper`, new SwiperOptions(document.querySelectorAll(`.reviews .pagination__button`)));
 
+/* -----------------
+  Формы блоков акции
+  ------------------ */
+// Оживление формы блока акции
+const entryContent = document.querySelectorAll(`.entry__content`);
+const entryMessage = document.querySelectorAll(`.entry__message`);
+
+for (let i = 0; i < entryContent.length; i++) {
+  const entryForm = entryContent[i].querySelector(`.form`);
+
+  entryForm.onsubmit = (evt) => {
+    evt.preventDefault(); // Форма не отправляется, это сделано для демонстрации
+    entryContent[i].classList.add(`entry__content--hidden`);
+    entryMessage[i].classList.remove(`entry__message--hidden`);
+  };
+}
+
 /* -----------------------
   Пользовательские функции
   ------------------------ */
