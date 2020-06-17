@@ -79,37 +79,10 @@ scrollHeroBtn.onclick = (evt) => {
   Слайдеры
   -------- */
 // Оживление слайдера направлений
-const classesPaginationBtns = document.querySelectorAll(`.classes .pagination__button`);
+const classesSwiper = new Swiper(`.classes__wrapper`, new SwiperOptions(document.querySelectorAll(`.classes .pagination__button`)));
 
-const classesSwiper = new Swiper(`.classes__wrapper`, {
-  spaceBetween: 20,
-  loop: true,
-  breakpoints: {
-    768: {
-      spaceBetween: 30
-    },
-    1920: {
-      spaceBetween: 90
-    }
-  },
-  navigation: {
-    nextEl: `.button-arrow--right`,
-    prevEl: `.button-arrow--left`
-  },
-  pagination: {
-    el: `.pagination`,
-    clickable: true,
-    renderBullet(index, className) {
-      return `<button class="${className}" type="button" data-text="${classesPaginationBtns[index].dataset.text}">${classesPaginationBtns[index].textContent}</button>`;
-    },
-    bulletClass: `pagination__button`,
-    bulletActiveClass: `pagination__button--active`
-  },
-  keyboard: {
-    enabled: true,
-    pageUpDown: false
-  }
-});
+// Оживление слайдера тренеров
+const coachesSwiper = new Swiper(`.coaches__wrapper`, new SwiperOptions(document.querySelectorAll(`.coaches .pagination__button`)));
 
 /* -----------------------
   Пользовательские функции
@@ -154,4 +127,36 @@ function changeScrollBtn(btn, section) {
 // Добавление ведущего нуля к числу
 function addLeadingZero(num) {
   return num > 9 ? num : `0` + num;
+}
+
+// Создание объекта опций для слайдеров
+function SwiperOptions(paginationBtns) {
+  this.autoHeight = true;
+  this.spaceBetween = 20;
+  this.loop = true;
+  this.breakpoints = {
+    768: {
+      spaceBetween: 30
+    },
+    1920: {
+      spaceBetween: 90
+    }
+  };
+  this.navigation = {
+    nextEl: `.button-arrow--right`,
+    prevEl: `.button-arrow--left`
+  };
+  this.pagination = {
+    el: `.pagination`,
+    clickable: true,
+    renderBullet(index, className) {
+      return `<button class="${className}" type="button" data-text="${paginationBtns[index].dataset.text}">${paginationBtns[index].textContent}</button>`;
+    },
+    bulletClass: `pagination__button`,
+    bulletActiveClass: `pagination__button--active`
+  };
+  this.keyboard = {
+    enabled: true,
+    pageUpDown: false
+  };
 }

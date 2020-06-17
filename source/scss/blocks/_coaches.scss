@@ -8,6 +8,10 @@
   width: 100%;
   padding-bottom: 90px;
 
+  .no-js & {
+    overflow: auto;
+  }
+
   @media (min-width: 768px) {
     padding-top: 120px;
   }
@@ -19,15 +23,11 @@
 
 .coaches__item {
   position: relative;
+  box-sizing: border-box;
   width: 100%;
   padding-top: 321px;
 
-  &:not(:first-child) {
-    display: none;
-  }
-
   @media (min-width: 768px) {
-    position: static;
     padding-top: 0;
     padding-right: 271px;
   }
@@ -49,18 +49,18 @@
 
     @media (min-width: 768px) {
       top: auto;
-      right: 59px;
-      bottom: calc(50% - 426px);
+      right: 29px;
+      bottom: calc(50% - 529px);
       width: 244px;
       height: 500px;
       transform: none;
     }
 
     @media (min-width: 1920px) {
-      top: calc(50% - 399px);
+      top: calc(50% - 338px);
       right: auto;
       bottom: auto;
-      left: 460px;
+      left: 370px;
       width: 397px;
       height: 803px;
     }
@@ -125,9 +125,14 @@
   top: 153px;
   right: 20px;
   left: 20px;
+  z-index: 1;
   display: flex;
   justify-content: space-between;
   pointer-events: none;
+
+  .no-js & {
+    display: none;
+  }
 
   @media (min-width: 768px) {
     display: none;
@@ -138,10 +143,20 @@
   position: absolute;
   top: 153px;
   right: 30px;
+  z-index: 1;
+
+  .js & {
+    bottom: auto;
+    left: auto;
+    width: auto;
+  }
 
   @media (min-width: 1920px) {
     top: 222px;
     right: auto;
-    left: 249px;
+
+    .js & {
+      left: 249px;
+    }
   }
 }
