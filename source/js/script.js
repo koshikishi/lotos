@@ -75,6 +75,42 @@ scrollHeroBtn.onclick = (evt) => {
   fullpage.moveSectionDown();
 };
 
+/* -------
+  Слайдеры
+  -------- */
+// Оживление слайдера направлений
+const classesPaginationBtns = document.querySelectorAll(`.classes .pagination__button`);
+
+const classesSwiper = new Swiper(`.classes__wrapper`, {
+  spaceBetween: 20,
+  loop: true,
+  breakpoints: {
+    768: {
+      spaceBetween: 30
+    },
+    1920: {
+      spaceBetween: 90
+    }
+  },
+  navigation: {
+    nextEl: `.button-arrow--right`,
+    prevEl: `.button-arrow--left`
+  },
+  pagination: {
+    el: `.pagination`,
+    clickable: true,
+    renderBullet(index, className) {
+      return `<button class="${className}" type="button" data-text="${classesPaginationBtns[index].dataset.text}">${classesPaginationBtns[index].textContent}</button>`;
+    },
+    bulletClass: `pagination__button`,
+    bulletActiveClass: `pagination__button--active`
+  },
+  keyboard: {
+    enabled: true,
+    pageUpDown: false
+  }
+});
+
 /* -----------------------
   Пользовательские функции
   ------------------------ */

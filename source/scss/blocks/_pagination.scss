@@ -1,6 +1,10 @@
 .pagination {
   display: none;
 
+  .no-js & {
+    display: none;
+  }
+
   @media (min-width: 768px) {
     display: block;
   }

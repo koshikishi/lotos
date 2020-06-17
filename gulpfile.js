@@ -72,7 +72,10 @@ exports.js = js;
 
 // Минификация файлов библиотек *.css
 function csslibs() {
-  return src(`node_modules/fullpage.js/dist/fullpage.css`)
+  return src([
+    `node_modules/fullpage.js/dist/fullpage.css`,
+    `node_modules/swiper/css/swiper.css`
+  ])
     .pipe(sourcemaps.init())
     .pipe(cleanCSS({
       level: {
@@ -94,7 +97,8 @@ function jslibs() {
   return pipeline(
     src([
       `node_modules/fullpage.js/dist/fullpage.js`,
-      `node_modules/fullpage.js/vendors/scrolloverflow.js`
+      `node_modules/fullpage.js/vendors/scrolloverflow.js`,
+      `node_modules/swiper/js/swiper.js`
     ]),
     sourcemaps.init(),
     uglify(),
