@@ -1,5 +1,8 @@
 .section {
   position: relative;
+}
+
+.section__wrapper {
   display: flex;
   justify-content: center;
   align-items: stretch;
@@ -10,8 +13,7 @@
   }
 
   .js & {
-    height: 100vh;
-    overflow: auto;
+    height: 100%;
   }
 }
 

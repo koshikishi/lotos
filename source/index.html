@@ -10,33 +10,34 @@
     <link rel="preload" href="fonts/geometria-medium.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="fonts/montserrat-regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/fullpage.min.css">
   </head>
-  <body class="page" id="top">
+  <body class="page">
     <div class="visually-hidden">
       <include src="build/img/sprite.svg"></include>
     </div>
     <header class="header page__header">
       <nav class="menu header__menu" id="menu">
         <ul class="menu__list">
-          <li class="menu__item">
+          <li class="menu__item" data-menuanchor="top">
             <a class="menu__link" href="#top">Главная</a>
           </li>
-          <li class="menu__item">
+          <li class="menu__item" data-menuanchor="classes">
             <a class="menu__link" href="#classes">Направления</a>
           </li>
-          <li class="menu__item">
+          <li class="menu__item" data-menuanchor="coaches">
             <a class="menu__link" href="#coaches">Преподаватели</a>
           </li>
-          <li class="menu__item">
+          <li class="menu__item" data-menuanchor="abonements">
             <a class="menu__link" href="#abonements">Абонементы</a>
           </li>
-          <li class="menu__item">
+          <li class="menu__item" data-menuanchor="schedule">
             <a class="menu__link" href="#schedule">Расписание</a>
           </li>
-          <li class="menu__item">
+          <li class="menu__item" data-menuanchor="reviews">
             <a class="menu__link" href="#reviews">Отзывы</a>
           </li>
-          <li class="menu__item">
+          <li class="menu__item" data-menuanchor="contacts">
             <a class="menu__link" href="#contacts">Контакты</a>
           </li>
         </ul>
@@ -82,671 +83,691 @@
         <span>Вернуться</span>
       </a>
     </header>
-    <main id="container">
-      <section class="section hero">
-        <p class="section__title">Добро пожаловать</p>
-        <div class="hero__wrapper">
-          <div class="hero__content">
-            <h1 class="hero__title">
-              <a class="button-arrow hero__scroll" href="#classes">
-                <svg width="6" height="6" viewBox="0 0 6 6"><use href="#icon-triangle"></use></svg>
-                <span>Читать далее</span>
+    <main id="fullpage">
+      <section class="section hero" id="top">
+        <div class="section__wrapper">
+          <p class="section__title">Добро пожаловать</p>
+          <div class="hero__wrapper">
+            <div class="hero__content">
+              <h1 class="hero__title">
+                <a class="button-arrow hero__scroll" href="#classes">
+                  <svg width="6" height="6" viewBox="0 0 6 6"><use href="#icon-triangle"></use></svg>
+                  <span>Читать далее</span>
+                </a>
+                <span>Центр йоги</span>
+                Lotos
+              </h1>
+              <a class="hero__invite" href="#!">
+                <svg width="16.688" height="16.688" viewBox="0 0 16.688 16.688"><use href="#icon-plus"></use></svg>
+                Приглашаем вас и ваших друзей на бесплатное пробное занятие
               </a>
-              <span>Центр йоги</span>
-              Lotos
-            </h1>
-            <a class="hero__invite" href="#!">
-              <svg width="16.688" height="16.688" viewBox="0 0 16.688 16.688"><use href="#icon-plus"></use></svg>
-              Приглашаем вас и ваших друзей на бесплатное пробное занятие
-            </a>
+            </div>
           </div>
         </div>
       </section>
       <section class="section classes" id="classes">
-        <h2 class="section__title">Направления и классы</h2>
-        <div class="classes__wrapper">
-          <div class="classes__list">
-            <div class="classes__item">
-              <h3 class="classes__title">
-                <span>Yoga —</span>
-                Для начинающих
-              </h3>
-              <div class="classes__text">
-                <p>Йога для начинающих рассчитана на тех, кто до этого никогда ей не занимался и&nbsp;требует обучения. Такой программный комплекс существует и в нашем центре.</p>
-                <p>Мы предлагаем посетить бесплатное вводное занятие, чтобы узнать, почему так много людей занимаются йогой и&nbsp;придерживаются здорового образа жизни.</p>
+        <div class="section__wrapper">
+          <h2 class="section__title">Направления и классы</h2>
+          <div class="classes__wrapper">
+            <div class="classes__list">
+              <div class="classes__item">
+                <h3 class="classes__title">
+                  <span>Yoga —</span>
+                  Для начинающих
+                </h3>
+                <div class="classes__text">
+                  <p>Йога для начинающих рассчитана на тех, кто до этого никогда ей не занимался и&nbsp;требует обучения. Такой программный комплекс существует и в нашем центре.</p>
+                  <p>Мы предлагаем посетить бесплатное вводное занятие, чтобы узнать, почему так много людей занимаются йогой и&nbsp;придерживаются здорового образа жизни.</p>
+                </div>
+                <a class="button button--plus" href="#!">
+                  <span>Записаться онлайн</span>
+                </a>
               </div>
-              <a class="button button--plus" href="#!">
-                <span>Записаться онлайн</span>
-              </a>
-            </div>
-            <div class="classes__item">
-              <h3 class="classes__title">
-                <span>Yoga —</span>
-                Аштанга Виньяса
-              </h3>
-              <div class="classes__text">
-                <p>Имеется спорная точка зрения, гласящая примерно следующее: действия представителей оппозиции, инициированные исключительно синтетически, ассоциативно.</p>
-                <p>И нет сомнений, что ключевые особенности структуры проекта являются только методом политического участия и заблокированы в рамках своих собственных.</p>
+              <div class="classes__item">
+                <h3 class="classes__title">
+                  <span>Yoga —</span>
+                  Аштанга Виньяса
+                </h3>
+                <div class="classes__text">
+                  <p>Имеется спорная точка зрения, гласящая примерно следующее: действия представителей оппозиции, инициированные исключительно синтетически, ассоциативно.</p>
+                  <p>И нет сомнений, что ключевые особенности структуры проекта являются только методом политического участия и заблокированы в рамках своих собственных.</p>
+                </div>
+                <a class="button button--plus" href="#!">
+                  <span>Записаться онлайн</span>
+                </a>
               </div>
-              <a class="button button--plus" href="#!">
-                <span>Записаться онлайн</span>
-              </a>
-            </div>
-            <div class="classes__item">
-              <h3 class="classes__title">
-                <span>Yoga —</span>
-                Универсальная
-              </h3>
-              <div class="classes__text">
-                <p>Являясь всего лишь частью общей картины, представители современных социальных резервов преданы социально-демократической анафеме.</p>
-                <p>Не следует, однако, забывать, что высокотехнологичная концепция общественного уклада прекрасно подходит для реализации инновационных методов.</p>
+              <div class="classes__item">
+                <h3 class="classes__title">
+                  <span>Yoga —</span>
+                  Универсальная
+                </h3>
+                <div class="classes__text">
+                  <p>Являясь всего лишь частью общей картины, представители современных социальных резервов преданы социально-демократической анафеме.</p>
+                  <p>Не следует, однако, забывать, что высокотехнологичная концепция общественного уклада прекрасно подходит для реализации инновационных методов.</p>
+                </div>
+                <a class="button button--plus" href="#!">
+                  <span>Записаться онлайн</span>
+                </a>
               </div>
-              <a class="button button--plus" href="#!">
-                <span>Записаться онлайн</span>
-              </a>
-            </div>
-            <div class="classes__item">
-              <h3 class="classes__title">
-                <span>Yoga —</span>
-                Кундалини
-              </h3>
-              <div class="classes__text">
-                <p>Таким образом, высокотехнологичная концепция общественного уклада способствует повышению качества экономической целесообразности принимаемых решений.</p>
-                <p>Также как синтетическое тестирование создаёт предпосылки для приоритизации разума над эмоциями! Идейные соображения высшего порядка.</p>
+              <div class="classes__item">
+                <h3 class="classes__title">
+                  <span>Yoga —</span>
+                  Кундалини
+                </h3>
+                <div class="classes__text">
+                  <p>Таким образом, высокотехнологичная концепция общественного уклада способствует повышению качества экономической целесообразности принимаемых решений.</p>
+                  <p>Также как синтетическое тестирование создаёт предпосылки для приоритизации разума над эмоциями! Идейные соображения высшего порядка.</p>
+                </div>
+                <a class="button button--plus" href="#!">
+                  <span>Записаться онлайн</span>
+                </a>
               </div>
-              <a class="button button--plus" href="#!">
-                <span>Записаться онлайн</span>
-              </a>
-            </div>
-            <div class="classes__item">
-              <h3 class="classes__title">
-                <span>Yoga —</span>
-                Айенгара
-              </h3>
-              <div class="classes__text">
-                <p>А также разбавленное изрядной долей эмпатии, рациональное мышление требует от нас анализа переосмысления внешнеэкономических политик.</p>
-                <p>Равным образом, синтетическое тестирование является качественно новой ступенью переосмысления внешнеэкономических политик.</p>
+              <div class="classes__item">
+                <h3 class="classes__title">
+                  <span>Yoga —</span>
+                  Айенгара
+                </h3>
+                <div class="classes__text">
+                  <p>А также разбавленное изрядной долей эмпатии, рациональное мышление требует от нас анализа переосмысления внешнеэкономических политик.</p>
+                  <p>Равным образом, синтетическое тестирование является качественно новой ступенью переосмысления внешнеэкономических политик.</p>
+                </div>
+                <a class="button button--plus" href="#!">
+                  <span>Записаться онлайн</span>
+                </a>
               </div>
-              <a class="button button--plus" href="#!">
-                <span>Записаться онлайн</span>
-              </a>
-            </div>
-            <div class="classes__item">
-              <h3 class="classes__title">
-                <span>Yoga —</span>
-                Терапия
-              </h3>
-              <div class="classes__text">
-                <p>Значимость этих проблем настолько очевидна, что высокое качество позиционных исследований предопределяет высокую востребованность поставленных обществом задач.</p>
-                <p>Таким образом, новая модель организационной деятельности представляет собой интересный эксперимент проверки вывода текущих активов.</p>
+              <div class="classes__item">
+                <h3 class="classes__title">
+                  <span>Yoga —</span>
+                  Терапия
+                </h3>
+                <div class="classes__text">
+                  <p>Значимость этих проблем настолько очевидна, что высокое качество позиционных исследований предопределяет высокую востребованность поставленных обществом задач.</p>
+                  <p>Таким образом, новая модель организационной деятельности представляет собой интересный эксперимент проверки вывода текущих активов.</p>
+                </div>
+                <a class="button button--plus" href="#!">
+                  <span>Записаться онлайн</span>
+                </a>
               </div>
-              <a class="button button--plus" href="#!">
-                <span>Записаться онлайн</span>
-              </a>
             </div>
-          </div>
-          <div class="classes__nav-buttons">
-            <button class="button-arrow button-arrow--left" type="button">
-              <svg width="6" height="6" viewBox="0 0 6 6"><use href="#icon-triangle"></use></svg>
-              <span>Предыдущий класс</span>
-            </button>
-            <button class="button-arrow button-arrow--right" type="button">
-              <svg width="6" height="6" viewBox="0 0 6 6"><use href="#icon-triangle"></use></svg>
-              <span>Следующий класс</span>
-            </button>
-          </div>
-          <div class="pagination pagination--inverse classes__pagination">
-            <button class="pagination__button pagination__button--active" type="button" data-text="Yoga">Для начинающих</button>
-            <button class="pagination__button" type="button" data-text="Yoga">Аштанга Виньяса</button>
-            <button class="pagination__button" type="button" data-text="Yoga">Универсальная</button>
-            <button class="pagination__button" type="button" data-text="Yoga">Кундалини</button>
-            <button class="pagination__button" type="button" data-text="Yoga">Айенгара</button>
-            <button class="pagination__button" type="button" data-text="Yoga">Терапия</button>
+            <div class="classes__nav-buttons">
+              <button class="button-arrow button-arrow--left" type="button">
+                <svg width="6" height="6" viewBox="0 0 6 6"><use href="#icon-triangle"></use></svg>
+                <span>Предыдущий класс</span>
+              </button>
+              <button class="button-arrow button-arrow--right" type="button">
+                <svg width="6" height="6" viewBox="0 0 6 6"><use href="#icon-triangle"></use></svg>
+                <span>Следующий класс</span>
+              </button>
+            </div>
+            <div class="pagination pagination--inverse classes__pagination">
+              <button class="pagination__button pagination__button--active" type="button" data-text="Yoga">Для начинающих</button>
+              <button class="pagination__button" type="button" data-text="Yoga">Аштанга Виньяса</button>
+              <button class="pagination__button" type="button" data-text="Yoga">Универсальная</button>
+              <button class="pagination__button" type="button" data-text="Yoga">Кундалини</button>
+              <button class="pagination__button" type="button" data-text="Yoga">Айенгара</button>
+              <button class="pagination__button" type="button" data-text="Yoga">Терапия</button>
+            </div>
           </div>
         </div>
       </section>
-      <section class="section entry entry--first">
-        <h2 class="section__title">Пробное занятие</h2>
-        <div class="entry__wrapper">
-          <div class="entry__content">
-            <h3 class="entry__title">
-              <span>10%</span>
-              скидка на абонемент
-            </h3>
-            <p class="entry__text">Мы сделаем для вас 10% скидку на&nbsp;абонемент, купленный в день посещения вводного занятия.</p>
-            <form class="form entry__form" action="#" method="post">
-              <input class="form__input" type="text" name="name" placeholder="Ваше имя" aria-label="Ваше имя">
-              <input class="form__input" type="tel" name="phone" placeholder="Ваш телефон" aria-label="Ваш телефон">
-              <button class="button button--envelope form__button" type="submit">
-                <span>Отправить заявку</span>
-              </button>
-              <small class="form__consent">Нажимая «Отправить заявку», вы даете <a href="#!">согласие</a> на&nbsp;обработку своих персональных данных</small>
-            </form>
-          </div>
-          <div class="entry__message entry__message--hidden">
-            <b class="entry__message-title">Спасибо!</b>
-            <p class="entry__message-text">Мы свяжемся с вами в течение 15 минут...</p>
+      <section class="section entry entry--first" id="entry1">
+        <div class="section__wrapper">
+          <h2 class="section__title">Пробное занятие</h2>
+          <div class="entry__wrapper">
+            <div class="entry__content">
+              <h3 class="entry__title">
+                <span>10%</span>
+                скидка на абонемент
+              </h3>
+              <p class="entry__text">Мы сделаем для вас 10% скидку на&nbsp;абонемент, купленный в день посещения вводного занятия.</p>
+              <form class="form entry__form" action="#" method="post">
+                <input class="form__input" type="text" name="name" placeholder="Ваше имя" aria-label="Ваше имя">
+                <input class="form__input" type="tel" name="phone" placeholder="Ваш телефон" aria-label="Ваш телефон">
+                <button class="button button--envelope form__button" type="submit">
+                  <span>Отправить заявку</span>
+                </button>
+                <small class="form__consent">Нажимая «Отправить заявку», вы даете <a href="#!">согласие</a> на&nbsp;обработку своих персональных данных</small>
+              </form>
+            </div>
+            <div class="entry__message entry__message--hidden">
+              <b class="entry__message-title">Спасибо!</b>
+              <p class="entry__message-text">Мы свяжемся с вами в течение 15 минут...</p>
+            </div>
           </div>
         </div>
       </section>
       <section class="section coaches" id="coaches">
-        <h2 class="section__title">Преподаватели</h2>
-        <div class="coaches__wrapper">
-          <div class="coaches__list">
-            <div class="coaches__item">
-              <picture class="coaches__image">
-                <source srcset="img/coach_01-desktop.webp" media="(min-width: 1920px)" type="image/webp">
-                <source srcset="img/coach_01-tablet.webp" media="(min-width: 768px)" type="image/webp">
-                <source srcset="img/coach_01-mobile.webp" type="image/webp">
-                <source srcset="img/coach_01-desktop.png" media="(min-width: 1920px)">
-                <source srcset="img/coach_01-tablet.png" media="(min-width: 768px)">
-                <source srcset="img/coach_01-mobile.png">
-                <img src="img/coach_01-desktop.png" alt="Преподаватель йоги Максим Казаков" width="397" height="803" loading="lazy">
-              </picture>
-              <h3 class="coaches__title">Максим Казаков</h3>
-              <p class="coaches__subtitle">Преподаватель йоги с 1997 года</p>
-              <div class="coaches__text">
-                <p>Занимается йогой Айенгара с 1990 года. Является преподавателем йоги Айенгара с 1997 года. Имеет международный сертификат Junior I. Проводит семинары, занятия разных уровней сложностей.</p>
-                <p>В йогу привел интерес. Является одним из самых опытных преподавателей и опорой нашего центра. Все студенты любят Максима за отзывчивость и&nbsp;индивидуальный подход к каждому.</p>
+        <div class="section__wrapper">
+          <h2 class="section__title">Преподаватели</h2>
+          <div class="coaches__wrapper">
+            <div class="coaches__list">
+              <div class="coaches__item">
+                <picture class="coaches__image">
+                  <source srcset="img/coach_01-desktop.webp" media="(min-width: 1920px)" type="image/webp">
+                  <source srcset="img/coach_01-tablet.webp" media="(min-width: 768px)" type="image/webp">
+                  <source srcset="img/coach_01-mobile.webp" type="image/webp">
+                  <source srcset="img/coach_01-desktop.png" media="(min-width: 1920px)">
+                  <source srcset="img/coach_01-tablet.png" media="(min-width: 768px)">
+                  <source srcset="img/coach_01-mobile.png">
+                  <img src="img/coach_01-desktop.png" alt="Преподаватель йоги Максим Казаков" width="397" height="803" loading="lazy">
+                </picture>
+                <h3 class="coaches__title">Максим Казаков</h3>
+                <p class="coaches__subtitle">Преподаватель йоги с 1997 года</p>
+                <div class="coaches__text">
+                  <p>Занимается йогой Айенгара с 1990 года. Является преподавателем йоги Айенгара с 1997 года. Имеет международный сертификат Junior I. Проводит семинары, занятия разных уровней сложностей.</p>
+                  <p>В йогу привел интерес. Является одним из самых опытных преподавателей и опорой нашего центра. Все студенты любят Максима за отзывчивость и&nbsp;индивидуальный подход к каждому.</p>
+                </div>
+                <a class="button button--plus" href="#!">
+                  <span>Записаться к тренеру</span>
+                </a>
               </div>
-              <a class="button button--plus" href="#!">
-                <span>Записаться к тренеру</span>
-              </a>
-            </div>
-            <div class="coaches__item">
-              <picture class="coaches__image">
-                <source srcset="img/coach_02-desktop.webp" media="(min-width: 1920px)" type="image/webp">
-                <source srcset="img/coach_02-tablet.webp" media="(min-width: 768px)" type="image/webp">
-                <source srcset="img/coach_02-mobile.webp" type="image/webp">
-                <source srcset="img/coach_02-desktop.png" media="(min-width: 1920px)">
-                <source srcset="img/coach_02-tablet.png" media="(min-width: 768px)">
-                <source srcset="img/coach_02-mobile.png">
-                <img src="img/coach_02-desktop.png" alt="Преподаватель йоги Юлия Зырянова" width="397" height="803" loading="lazy">
-              </picture>
-              <h3 class="coaches__title">Юлия Зырянова</h3>
-              <p class="coaches__subtitle">Преподаватель йоги с 1998 года</p>
-              <div class="coaches__text">
-                <p>Имеется спорная точка зрения, гласящая примерно следующее: действия представителей оппозиции, инициированные исключительно синтетически, ассоциативно распределены по отраслям.</p>
-                <p>И нет сомнений, что ключевые особенности структуры проекта являются только методом политического участия и заблокированы в рамках своих собственных рациональных ограничений.</p>
+              <div class="coaches__item">
+                <picture class="coaches__image">
+                  <source srcset="img/coach_02-desktop.webp" media="(min-width: 1920px)" type="image/webp">
+                  <source srcset="img/coach_02-tablet.webp" media="(min-width: 768px)" type="image/webp">
+                  <source srcset="img/coach_02-mobile.webp" type="image/webp">
+                  <source srcset="img/coach_02-desktop.png" media="(min-width: 1920px)">
+                  <source srcset="img/coach_02-tablet.png" media="(min-width: 768px)">
+                  <source srcset="img/coach_02-mobile.png">
+                  <img src="img/coach_02-desktop.png" alt="Преподаватель йоги Юлия Зырянова" width="397" height="803" loading="lazy">
+                </picture>
+                <h3 class="coaches__title">Юлия Зырянова</h3>
+                <p class="coaches__subtitle">Преподаватель йоги с 1998 года</p>
+                <div class="coaches__text">
+                  <p>Имеется спорная точка зрения, гласящая примерно следующее: действия представителей оппозиции, инициированные исключительно синтетически, ассоциативно распределены по отраслям.</p>
+                  <p>И нет сомнений, что ключевые особенности структуры проекта являются только методом политического участия и заблокированы в рамках своих собственных рациональных ограничений.</p>
+                </div>
+                <a class="button button--plus" href="#!">
+                  <span>Записаться к тренеру</span>
+                </a>
               </div>
-              <a class="button button--plus" href="#!">
-                <span>Записаться к тренеру</span>
-              </a>
-            </div>
-            <div class="coaches__item">
-              <picture class="coaches__image">
-                <source srcset="img/coach_03-desktop.webp" media="(min-width: 1920px)" type="image/webp">
-                <source srcset="img/coach_03-tablet.webp" media="(min-width: 768px)" type="image/webp">
-                <source srcset="img/coach_03-mobile.webp" type="image/webp">
-                <source srcset="img/coach_03-desktop.png" media="(min-width: 1920px)">
-                <source srcset="img/coach_03-tablet.png" media="(min-width: 768px)">
-                <source srcset="img/coach_03-mobile.png">
-                <img src="img/coach_03-desktop.png" alt="Преподаватель йоги Настя Антипова" width="397" height="803" loading="lazy">
-              </picture>
-              <h3 class="coaches__title">Настя Антипова</h3>
-              <p class="coaches__subtitle">Преподаватель йоги с 1996 года</p>
-              <div class="coaches__text">
-                <p>Таким образом, являясь всего лишь частью общей картины, представители современных социальных резервов преданы социально-демократической анафеме.</p>
-                <p>Не следует, однако, забывать, что высокотехнологичная концепция общественного уклада прекрасно подходит для реализации инновационных методов управления процессами.</p>
+              <div class="coaches__item">
+                <picture class="coaches__image">
+                  <source srcset="img/coach_03-desktop.webp" media="(min-width: 1920px)" type="image/webp">
+                  <source srcset="img/coach_03-tablet.webp" media="(min-width: 768px)" type="image/webp">
+                  <source srcset="img/coach_03-mobile.webp" type="image/webp">
+                  <source srcset="img/coach_03-desktop.png" media="(min-width: 1920px)">
+                  <source srcset="img/coach_03-tablet.png" media="(min-width: 768px)">
+                  <source srcset="img/coach_03-mobile.png">
+                  <img src="img/coach_03-desktop.png" alt="Преподаватель йоги Настя Антипова" width="397" height="803" loading="lazy">
+                </picture>
+                <h3 class="coaches__title">Настя Антипова</h3>
+                <p class="coaches__subtitle">Преподаватель йоги с 1996 года</p>
+                <div class="coaches__text">
+                  <p>Таким образом, являясь всего лишь частью общей картины, представители современных социальных резервов преданы социально-демократической анафеме.</p>
+                  <p>Не следует, однако, забывать, что высокотехнологичная концепция общественного уклада прекрасно подходит для реализации инновационных методов управления процессами.</p>
+                </div>
+                <a class="button button--plus" href="#!">
+                  <span>Записаться к тренеру</span>
+                </a>
               </div>
-              <a class="button button--plus" href="#!">
-                <span>Записаться к тренеру</span>
-              </a>
-            </div>
-            <div class="coaches__item">
-              <picture class="coaches__image">
-                <source srcset="img/coach_04-desktop.webp" media="(min-width: 1920px)" type="image/webp">
-                <source srcset="img/coach_04-tablet.webp" media="(min-width: 768px)" type="image/webp">
-                <source srcset="img/coach_04-mobile.webp" type="image/webp">
-                <source srcset="img/coach_04-desktop.png" media="(min-width: 1920px)">
-                <source srcset="img/coach_04-tablet.png" media="(min-width: 768px)">
-                <source srcset="img/coach_04-mobile.png">
-                <img src="img/coach_04-desktop.png" alt="Преподаватель йоги Ольга Ветрова" width="397" height="803" loading="lazy">
-              </picture>
-              <h3 class="coaches__title">Ольга Ветрова</h3>
-              <p class="coaches__subtitle">Преподаватель йоги с 1997 года</p>
-              <div class="coaches__text">
-                <p>Идейные соображения высшего порядка, а также разбавленное изрядной долей эмпатии, рациональное мышление требует от нас анализа переосмысления внешнеэкономических политик.</p>
-                <p>Равным образом, синтетическое тестирование является качественно новой ступенью переосмысления внешнеэкономических политик и создаёт предпосылки для приоритизации разума!</p>
+              <div class="coaches__item">
+                <picture class="coaches__image">
+                  <source srcset="img/coach_04-desktop.webp" media="(min-width: 1920px)" type="image/webp">
+                  <source srcset="img/coach_04-tablet.webp" media="(min-width: 768px)" type="image/webp">
+                  <source srcset="img/coach_04-mobile.webp" type="image/webp">
+                  <source srcset="img/coach_04-desktop.png" media="(min-width: 1920px)">
+                  <source srcset="img/coach_04-tablet.png" media="(min-width: 768px)">
+                  <source srcset="img/coach_04-mobile.png">
+                  <img src="img/coach_04-desktop.png" alt="Преподаватель йоги Ольга Ветрова" width="397" height="803" loading="lazy">
+                </picture>
+                <h3 class="coaches__title">Ольга Ветрова</h3>
+                <p class="coaches__subtitle">Преподаватель йоги с 1997 года</p>
+                <div class="coaches__text">
+                  <p>Идейные соображения высшего порядка, а также разбавленное изрядной долей эмпатии, рациональное мышление требует от нас анализа переосмысления внешнеэкономических политик.</p>
+                  <p>Равным образом, синтетическое тестирование является качественно новой ступенью переосмысления внешнеэкономических политик и создаёт предпосылки для приоритизации разума!</p>
+                </div>
+                <a class="button button--plus" href="#!">
+                  <span>Записаться к тренеру</span>
+                </a>
               </div>
-              <a class="button button--plus" href="#!">
-                <span>Записаться к тренеру</span>
-              </a>
-            </div>
-            <div class="coaches__item">
-              <picture class="coaches__image">
-                <source srcset="img/coach_05-desktop.webp" media="(min-width: 1920px)" type="image/webp">
-                <source srcset="img/coach_05-tablet.webp" media="(min-width: 768px)" type="image/webp">
-                <source srcset="img/coach_05-mobile.webp" type="image/webp">
-                <source srcset="img/coach_05-desktop.png" media="(min-width: 1920px)">
-                <source srcset="img/coach_05-tablet.png" media="(min-width: 768px)">
-                <source srcset="img/coach_05-mobile.png">
-                <img src="img/coach_05-desktop.png" alt="Преподаватель йоги Катя Стреженова" width="397" height="803" loading="lazy">
-              </picture>
-              <h3 class="coaches__title">Катя Стреженова</h3>
-              <p class="coaches__subtitle">Преподаватель йоги с 1998 года</p>
-              <div class="coaches__text">
-                <p>Значимость этих проблем настолько очевидна, что высокое качество позиционных исследований предопределяет высокую востребованность поставленных обществом задач.</p>
-                <p>Таким образом, новая модель организационной деятельности представляет собой интересный эксперимент проверки вывода текущих активов.</p>
+              <div class="coaches__item">
+                <picture class="coaches__image">
+                  <source srcset="img/coach_05-desktop.webp" media="(min-width: 1920px)" type="image/webp">
+                  <source srcset="img/coach_05-tablet.webp" media="(min-width: 768px)" type="image/webp">
+                  <source srcset="img/coach_05-mobile.webp" type="image/webp">
+                  <source srcset="img/coach_05-desktop.png" media="(min-width: 1920px)">
+                  <source srcset="img/coach_05-tablet.png" media="(min-width: 768px)">
+                  <source srcset="img/coach_05-mobile.png">
+                  <img src="img/coach_05-desktop.png" alt="Преподаватель йоги Катя Стреженова" width="397" height="803" loading="lazy">
+                </picture>
+                <h3 class="coaches__title">Катя Стреженова</h3>
+                <p class="coaches__subtitle">Преподаватель йоги с 1998 года</p>
+                <div class="coaches__text">
+                  <p>Значимость этих проблем настолько очевидна, что высокое качество позиционных исследований предопределяет высокую востребованность поставленных обществом задач.</p>
+                  <p>Таким образом, новая модель организационной деятельности представляет собой интересный эксперимент проверки вывода текущих активов.</p>
+                </div>
+                <a class="button button--plus" href="#!">
+                  <span>Записаться к тренеру</span>
+                </a>
               </div>
-              <a class="button button--plus" href="#!">
-                <span>Записаться к тренеру</span>
-              </a>
-            </div>
-            <div class="coaches__item">
-              <picture class="coaches__image">
-                <source srcset="img/coach_06-desktop.webp" media="(min-width: 1920px)" type="image/webp">
-                <source srcset="img/coach_06-tablet.webp" media="(min-width: 768px)" type="image/webp">
-                <source srcset="img/coach_06-mobile.webp" type="image/webp">
-                <source srcset="img/coach_06-desktop.png" media="(min-width: 1920px)">
-                <source srcset="img/coach_06-tablet.png" media="(min-width: 768px)">
-                <source srcset="img/coach_06-mobile.png">
-                <img src="img/coach_06-desktop.png" alt="Преподаватель йоги Мария Жукова" width="397" height="803" loading="lazy">
-              </picture>
-              <h3 class="coaches__title">Мария Жукова</h3>
-              <p class="coaches__subtitle">Преподаватель йоги с 1996 года</p>
-              <div class="coaches__text">
-                <p>Внезапно, действия представителей оппозиции формируют глобальную экономическую сеть и при этом - смешаны с не уникальными данными до степени совершенной неузнаваемости.</p>
-                <p>Как принято считать, представители современных социальных резервов, превозмогая сложившуюся непростую экономическую ситуацию, представлены в исключительно положительном свете.</p>
+              <div class="coaches__item">
+                <picture class="coaches__image">
+                  <source srcset="img/coach_06-desktop.webp" media="(min-width: 1920px)" type="image/webp">
+                  <source srcset="img/coach_06-tablet.webp" media="(min-width: 768px)" type="image/webp">
+                  <source srcset="img/coach_06-mobile.webp" type="image/webp">
+                  <source srcset="img/coach_06-desktop.png" media="(min-width: 1920px)">
+                  <source srcset="img/coach_06-tablet.png" media="(min-width: 768px)">
+                  <source srcset="img/coach_06-mobile.png">
+                  <img src="img/coach_06-desktop.png" alt="Преподаватель йоги Мария Жукова" width="397" height="803" loading="lazy">
+                </picture>
+                <h3 class="coaches__title">Мария Жукова</h3>
+                <p class="coaches__subtitle">Преподаватель йоги с 1996 года</p>
+                <div class="coaches__text">
+                  <p>Внезапно, действия представителей оппозиции формируют глобальную экономическую сеть и при этом - смешаны с не уникальными данными до степени совершенной неузнаваемости.</p>
+                  <p>Как принято считать, представители современных социальных резервов, превозмогая сложившуюся непростую экономическую ситуацию, представлены в исключительно положительном свете.</p>
+                </div>
+                <a class="button button--plus" href="#!">
+                  <span>Записаться к тренеру</span>
+                </a>
               </div>
-              <a class="button button--plus" href="#!">
-                <span>Записаться к тренеру</span>
-              </a>
             </div>
-          </div>
-          <div class="coaches__nav-buttons">
-            <button class="button-arrow button-arrow--left" type="button">
-              <svg width="6" height="6" viewBox="0 0 6 6"><use href="#icon-triangle"></use></svg>
-              <span>Предыдущий тренер</span>
-            </button>
-            <button class="button-arrow button-arrow--right" type="button">
-              <svg width="6" height="6" viewBox="0 0 6 6"><use href="#icon-triangle"></use></svg>
-              <span>Следующий тренер</span>
-            </button>
-          </div>
-          <div class="pagination coaches__pagination">
-            <button class="pagination__button pagination__button--active" type="button" data-text="Trainer">Максим Казаков</button>
-            <button class="pagination__button" type="button" data-text="Trainer">Юлия Зырянова</button>
-            <button class="pagination__button" type="button" data-text="Trainer">Настя Антипова</button>
-            <button class="pagination__button" type="button" data-text="Trainer">Ольга Ветрова</button>
-            <button class="pagination__button" type="button" data-text="Trainer">Катя Стреженова</button>
-            <button class="pagination__button" type="button" data-text="Trainer">Мария Жукова</button>
+            <div class="coaches__nav-buttons">
+              <button class="button-arrow button-arrow--left" type="button">
+                <svg width="6" height="6" viewBox="0 0 6 6"><use href="#icon-triangle"></use></svg>
+                <span>Предыдущий тренер</span>
+              </button>
+              <button class="button-arrow button-arrow--right" type="button">
+                <svg width="6" height="6" viewBox="0 0 6 6"><use href="#icon-triangle"></use></svg>
+                <span>Следующий тренер</span>
+              </button>
+            </div>
+            <div class="pagination coaches__pagination">
+              <button class="pagination__button pagination__button--active" type="button" data-text="Trainer">Максим Казаков</button>
+              <button class="pagination__button" type="button" data-text="Trainer">Юлия Зырянова</button>
+              <button class="pagination__button" type="button" data-text="Trainer">Настя Антипова</button>
+              <button class="pagination__button" type="button" data-text="Trainer">Ольга Ветрова</button>
+              <button class="pagination__button" type="button" data-text="Trainer">Катя Стреженова</button>
+              <button class="pagination__button" type="button" data-text="Trainer">Мария Жукова</button>
+            </div>
           </div>
         </div>
       </section>
       <section class="section abonements" id="abonements">
-        <h2 class="section__title">Абонементы</h2>
-        <div class="abonements__wrapper">
-          <form class="abonements__form" action="#" method="post">
-            <div class="abonements__fields">
-              <div class="abonements__field">
-                <input class="visually-hidden" id="day1" type="radio" name="abonement" value="300" checked>
-                <label class="abonements__label" for="day1">
-                  <svg width="16.688" height="16.688" viewBox="0 0 16.688 16.688"><use href="#icon-plus"></use></svg>
-                  Разовое занятие <b>300</b> руб.
-                </label>
+        <div class="section__wrapper">
+          <h2 class="section__title">Абонементы</h2>
+          <div class="abonements__wrapper">
+            <form class="abonements__form" action="#" method="post">
+              <div class="abonements__fields">
+                <div class="abonements__field">
+                  <input class="visually-hidden" id="day1" type="radio" name="abonement" value="300" checked>
+                  <label class="abonements__label" for="day1">
+                    <svg width="16.688" height="16.688" viewBox="0 0 16.688 16.688"><use href="#icon-plus"></use></svg>
+                    Разовое занятие <b>300</b> руб.
+                  </label>
+                </div>
+                <div class="abonements__field">
+                  <input class="visually-hidden" id="month1" type="radio" name="abonement" value="2000">
+                  <label class="abonements__label" for="month1">
+                    <svg width="16.688" height="16.688" viewBox="0 0 16.688 16.688"><use href="#icon-plus"></use></svg>
+                    Месяц занятий <b>2 000</b> руб.
+                  </label>
+                </div>
+                <div class="abonements__field">
+                  <input class="visually-hidden" id="month2" type="radio" name="abonement" value="3500">
+                  <label class="abonements__label" for="month2">
+                    <svg width="16.688" height="16.688" viewBox="0 0 16.688 16.688"><use href="#icon-plus"></use></svg>
+                    2 месяца занятий <b>3 500</b> руб.
+                  </label>
+                </div>
+                <div class="abonements__field">
+                  <input class="visually-hidden" id="month3" type="radio" name="abonement" value="4500">
+                  <label class="abonements__label" for="month3">
+                    <svg width="16.688" height="16.688" viewBox="0 0 16.688 16.688"><use href="#icon-plus"></use></svg>
+                    3 месяца занятий <b>4 500</b> руб.
+                  </label>
+                </div>
+                <div class="abonements__field">
+                  <input class="visually-hidden" id="month6" type="radio" name="abonement" value="8000">
+                  <label class="abonements__label" for="month6">
+                    <svg width="16.688" height="16.688" viewBox="0 0 16.688 16.688"><use href="#icon-plus"></use></svg>
+                    Пол года занятий <b>8 000</b> руб.
+                  </label>
+                </div>
+                <div class="abonements__field">
+                  <input class="visually-hidden" id="year1" type="radio" name="abonement" value="14000">
+                  <label class="abonements__label" for="year1">
+                    <svg width="16.688" height="16.688" viewBox="0 0 16.688 16.688"><use href="#icon-plus"></use></svg>
+                    Год занятий <b>14 000</b> руб.
+                  </label>
+                </div>
               </div>
-              <div class="abonements__field">
-                <input class="visually-hidden" id="month1" type="radio" name="abonement" value="2000">
-                <label class="abonements__label" for="month1">
-                  <svg width="16.688" height="16.688" viewBox="0 0 16.688 16.688"><use href="#icon-plus"></use></svg>
-                  Месяц занятий <b>2 000</b> руб.
-                </label>
-              </div>
-              <div class="abonements__field">
-                <input class="visually-hidden" id="month2" type="radio" name="abonement" value="3500">
-                <label class="abonements__label" for="month2">
-                  <svg width="16.688" height="16.688" viewBox="0 0 16.688 16.688"><use href="#icon-plus"></use></svg>
-                  2 месяца занятий <b>3 500</b> руб.
-                </label>
-              </div>
-              <div class="abonements__field">
-                <input class="visually-hidden" id="month3" type="radio" name="abonement" value="4500">
-                <label class="abonements__label" for="month3">
-                  <svg width="16.688" height="16.688" viewBox="0 0 16.688 16.688"><use href="#icon-plus"></use></svg>
-                  3 месяца занятий <b>4 500</b> руб.
-                </label>
-              </div>
-              <div class="abonements__field">
-                <input class="visually-hidden" id="month6" type="radio" name="abonement" value="8000">
-                <label class="abonements__label" for="month6">
-                  <svg width="16.688" height="16.688" viewBox="0 0 16.688 16.688"><use href="#icon-plus"></use></svg>
-                  Пол года занятий <b>8 000</b> руб.
-                </label>
-              </div>
-              <div class="abonements__field">
-                <input class="visually-hidden" id="year1" type="radio" name="abonement" value="14000">
-                <label class="abonements__label" for="year1">
-                  <svg width="16.688" height="16.688" viewBox="0 0 16.688 16.688"><use href="#icon-plus"></use></svg>
-                  Год занятий <b>14 000</b> руб.
-                </label>
-              </div>
-            </div>
-            <button class="button button--check" type="submit">
-              <span>Заказать абонемент</span>
-            </button>
-          </form>
+              <button class="button button--check" type="submit">
+                <span>Заказать абонемент</span>
+              </button>
+            </form>
+          </div>
         </div>
       </section>
       <section class="section schedule" id="schedule">
-        <h2 class="section__title">Расписание</h2>
-        <div class="schedule__wrapper">
-          <div class="schedule__table">
-            <div class="schedule__table-left">
-              <table>
-                <thead>
-                  <tr>
-                    <th class="schedule__download">
-                      <a href="#!" download>
-                        <svg width="512.171" height="512.171" viewBox="0 0 512.171 512.171"><use href="#icon-arrow"></use></svg>
-                        Скачать расписание
-                      </a>
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th>Понедельник</th>
-                  </tr>
-                  <tr>
-                    <th>Вторник</th>
-                  </tr>
-                  <tr>
-                    <th>Среда</th>
-                  </tr>
-                  <tr>
-                    <th>Четверг</th>
-                  </tr>
-                  <tr>
-                    <th>Пятница</th>
-                  </tr>
-                  <tr>
-                    <th>Суббота</th>
-                  </tr>
-                  <tr>
-                    <th>Воскресенье</th>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="schedule__table-main">
-              <table>
-                <thead>
-                  <tr>
-                    <th>08:00 − 09:25</th>
-                    <th>09:30 − 10:55</th>
-                    <th>11:00 − 12:25</th>
-                    <th>13:30 − 14:55</th>
-                    <th>15:00 − 16:25</th>
-                    <th>17:00 − 18:25</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Йога для начинающих</td>
-                    <td>Универсальная йога</td>
-                    <td>Йога Айенгара</td>
-                    <td>Аштанга Виньяса йога</td>
-                    <td>Йогатерапия</td>
-                    <td>Кундалини йога</td>
-                  </tr>
-                  <tr>
-                    <td>Кундалини йога</td>
-                    <td>Йогатерапия</td>
-                    <td>Аштанга Виньяса йога</td>
-                    <td>Йога Айенгара</td>
-                    <td>Универсальная йога</td>
-                    <td>Универсальная йога</td>
-                  </tr>
-                  <tr>
-                    <td>Универсальная йога</td>
-                    <td>Йога для начинающих</td>
-                    <td>Аштанга Виньяса йога</td>
-                    <td>Йога Айенгара</td>
-                    <td>Кундалини йога</td>
-                    <td>Йогатерапия</td>
-                  </tr>
-                  <tr>
-                    <td>Йога для начинающих</td>
-                    <td>Универсальная йога</td>
-                    <td>Йога Айенгара</td>
-                    <td>Аштанга Виньяса йога</td>
-                    <td>Йогатерапия</td>
-                    <td>Кундалини йога</td>
-                  </tr>
-                  <tr>
-                    <td>Кундалини йога</td>
-                    <td>Йогатерапия</td>
-                    <td>Аштанга Виньяса йога</td>
-                    <td>Йога Айенгара</td>
-                    <td>Универсальная йога</td>
-                    <td>Йога для начинающих</td>
-                  </tr>
-                  <tr>
-                    <td>Универсальная йога</td>
-                    <td>Йога для начинающих</td>
-                    <td>Аштанга Виньяса йога</td>
-                    <td>Йога Айенгара</td>
-                    <td>Кундалини йога</td>
-                    <td>Йогатерапия</td>
-                  </tr>
-                  <tr>
-                    <td>Йога для начинающих</td>
-                    <td>Универсальная йога</td>
-                    <td>Йога Айенгара</td>
-                    <td>Аштанга Виньяса йога</td>
-                    <td>Йогатерапия</td>
-                    <td>Кундалини йога</td>
-                  </tr>
-                </tbody>
-              </table>
+        <div class="section__wrapper">
+          <h2 class="section__title">Расписание</h2>
+          <div class="schedule__wrapper">
+            <div class="schedule__table">
+              <div class="schedule__table-left">
+                <table>
+                  <thead>
+                    <tr>
+                      <th class="schedule__download">
+                        <a href="#!" download>
+                          <svg width="512.171" height="512.171" viewBox="0 0 512.171 512.171"><use href="#icon-arrow"></use></svg>
+                          Скачать расписание
+                        </a>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th>Понедельник</th>
+                    </tr>
+                    <tr>
+                      <th>Вторник</th>
+                    </tr>
+                    <tr>
+                      <th>Среда</th>
+                    </tr>
+                    <tr>
+                      <th>Четверг</th>
+                    </tr>
+                    <tr>
+                      <th>Пятница</th>
+                    </tr>
+                    <tr>
+                      <th>Суббота</th>
+                    </tr>
+                    <tr>
+                      <th>Воскресенье</th>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="schedule__table-main">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>08:00 − 09:25</th>
+                      <th>09:30 − 10:55</th>
+                      <th>11:00 − 12:25</th>
+                      <th>13:30 − 14:55</th>
+                      <th>15:00 − 16:25</th>
+                      <th>17:00 − 18:25</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Йога для начинающих</td>
+                      <td>Универсальная йога</td>
+                      <td>Йога Айенгара</td>
+                      <td>Аштанга Виньяса йога</td>
+                      <td>Йогатерапия</td>
+                      <td>Кундалини йога</td>
+                    </tr>
+                    <tr>
+                      <td>Кундалини йога</td>
+                      <td>Йогатерапия</td>
+                      <td>Аштанга Виньяса йога</td>
+                      <td>Йога Айенгара</td>
+                      <td>Универсальная йога</td>
+                      <td>Универсальная йога</td>
+                    </tr>
+                    <tr>
+                      <td>Универсальная йога</td>
+                      <td>Йога для начинающих</td>
+                      <td>Аштанга Виньяса йога</td>
+                      <td>Йога Айенгара</td>
+                      <td>Кундалини йога</td>
+                      <td>Йогатерапия</td>
+                    </tr>
+                    <tr>
+                      <td>Йога для начинающих</td>
+                      <td>Универсальная йога</td>
+                      <td>Йога Айенгара</td>
+                      <td>Аштанга Виньяса йога</td>
+                      <td>Йогатерапия</td>
+                      <td>Кундалини йога</td>
+                    </tr>
+                    <tr>
+                      <td>Кундалини йога</td>
+                      <td>Йогатерапия</td>
+                      <td>Аштанга Виньяса йога</td>
+                      <td>Йога Айенгара</td>
+                      <td>Универсальная йога</td>
+                      <td>Йога для начинающих</td>
+                    </tr>
+                    <tr>
+                      <td>Универсальная йога</td>
+                      <td>Йога для начинающих</td>
+                      <td>Аштанга Виньяса йога</td>
+                      <td>Йога Айенгара</td>
+                      <td>Кундалини йога</td>
+                      <td>Йогатерапия</td>
+                    </tr>
+                    <tr>
+                      <td>Йога для начинающих</td>
+                      <td>Универсальная йога</td>
+                      <td>Йога Айенгара</td>
+                      <td>Аштанга Виньяса йога</td>
+                      <td>Йогатерапия</td>
+                      <td>Кундалини йога</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
         </div>
       </section>
       <section class="section reviews" id="reviews">
-        <h2 class="section__title">Отзывы</h2>
-        <div class="reviews__wrapper">
-          <div class="reviews__list">
-            <div class="reviews__item">
-              <div class="reviews__author">
-                <picture class="reviews__photo">
-                  <source srcset="img/review_author-01-desktop.webp" media="(min-width: 1920px)" type="image/webp">
-                  <source srcset="img/review_author-01-mobile.webp" type="image/webp">
-                  <source srcset="img/review_author-01-desktop.jpg" media="(min-width: 1920px)">
-                  <source srcset="img/review_author-01-mobile.jpg">
-                  <img src="img/review_author-01-desktop.jpg" alt="Автор отзыва Жанна Блиц" width="180" height="180" loading="lazy">
-                </picture>
-                <div class="reviews__heading">
-                  <h3 class="reviews__name">Жанна Блиц</h3>
-                  <p class="reviews__age">32 года</p>
+        <div class="section__wrapper">
+          <h2 class="section__title">Отзывы</h2>
+          <div class="reviews__wrapper">
+            <div class="reviews__list">
+              <div class="reviews__item">
+                <div class="reviews__author">
+                  <picture class="reviews__photo">
+                    <source srcset="img/review_author-01-desktop.webp" media="(min-width: 1920px)" type="image/webp">
+                    <source srcset="img/review_author-01-mobile.webp" type="image/webp">
+                    <source srcset="img/review_author-01-desktop.jpg" media="(min-width: 1920px)">
+                    <source srcset="img/review_author-01-mobile.jpg">
+                    <img src="img/review_author-01-desktop.jpg" alt="Автор отзыва Жанна Блиц" width="180" height="180" loading="lazy">
+                  </picture>
+                  <div class="reviews__heading">
+                    <h3 class="reviews__name">Жанна Блиц</h3>
+                    <p class="reviews__age">32 года</p>
+                  </div>
                 </div>
-              </div>
-              <div class="reviews__text">
-                <p>Не знаю, как остальные, но после занятий йогой хочется начать новую здоровую жизнь, хочется поесть овощей и фруктов и поднять свой иммунитет. Теперь для меня день занятий йогой — это день здоровья.</p>
-                <p>После упорных занятий я стала меньше болеть, и поняла, в&nbsp;чем смысл всех упражнений. Позы получаются элегантно, и&nbsp;не больно только тогда, когда не прилагаешь усилия, а&nbsp;остаёшься расслабленным на протяжении всего урока.</p>
-                <a class="reviews__link-more" href="#!">Читать полностью</a>
-              </div>
-              <a class="button button--plus" href="#!">
-                <span>Попробовать тоже</span>
-              </a>
-            </div>
-            <div class="reviews__item">
-              <div class="reviews__author">
-                <picture class="reviews__photo">
-                  <source srcset="img/review_author-02-desktop.webp" media="(min-width: 1920px)" type="image/webp">
-                  <source srcset="img/review_author-02-mobile.webp" type="image/webp">
-                  <source srcset="img/review_author-02-desktop.jpg" media="(min-width: 1920px)">
-                  <source srcset="img/review_author-02-mobile.jpg">
-                  <img src="img/review_author-02-desktop.jpg" alt="Автор отзыва Арина Наумова" width="180" height="180" loading="lazy">
-                </picture>
-                <div class="reviews__heading">
-                  <h3 class="reviews__name">Арина Наумова</h3>
-                  <p class="reviews__age">34 года</p>
+                <div class="reviews__text">
+                  <p>Не знаю, как остальные, но после занятий йогой хочется начать новую здоровую жизнь, хочется поесть овощей и фруктов и поднять свой иммунитет. Теперь для меня день занятий йогой — это день здоровья.</p>
+                  <p>После упорных занятий я стала меньше болеть, и поняла, в&nbsp;чем смысл всех упражнений. Позы получаются элегантно, и&nbsp;не больно только тогда, когда не прилагаешь усилия, а&nbsp;остаёшься расслабленным на протяжении всего урока.</p>
+                  <a class="reviews__link-more" href="#!">Читать полностью</a>
                 </div>
+                <a class="button button--plus" href="#!">
+                  <span>Попробовать тоже</span>
+                </a>
               </div>
-              <div class="reviews__text">
-                <p>И нет сомнений, что ключевые особенности структуры проекта являются только методом политического участия и заблокированы в рамках своих собственных рациональных ограничений.</p>
-                <p>Являясь всего лишь частью общей картины, представители современных социальных резервов преданы социально-демократической анафеме. Не следует, однако, забывать, что высокотехнологичная концепция общественного уклада.</p>
-                <a class="reviews__link-more" href="#!">Читать полностью</a>
-              </div>
-              <a class="button button--plus" href="#!">
-                <span>Попробовать тоже</span>
-              </a>
-            </div>
-            <div class="reviews__item">
-              <div class="reviews__author">
-                <picture class="reviews__photo">
-                  <source srcset="img/review_author-03-desktop.webp" media="(min-width: 1920px)" type="image/webp">
-                  <source srcset="img/review_author-03-mobile.webp" type="image/webp">
-                  <source srcset="img/review_author-03-desktop.jpg" media="(min-width: 1920px)">
-                  <source srcset="img/review_author-03-mobile.jpg">
-                  <img src="img/review_author-03-desktop.jpg" alt="Автор отзыва Виталий Коробко" width="180" height="180" loading="lazy">
-                </picture>
-                <div class="reviews__heading">
-                  <h3 class="reviews__name">Виталий Коробко</h3>
-                  <p class="reviews__age">33 года</p>
+              <div class="reviews__item">
+                <div class="reviews__author">
+                  <picture class="reviews__photo">
+                    <source srcset="img/review_author-02-desktop.webp" media="(min-width: 1920px)" type="image/webp">
+                    <source srcset="img/review_author-02-mobile.webp" type="image/webp">
+                    <source srcset="img/review_author-02-desktop.jpg" media="(min-width: 1920px)">
+                    <source srcset="img/review_author-02-mobile.jpg">
+                    <img src="img/review_author-02-desktop.jpg" alt="Автор отзыва Арина Наумова" width="180" height="180" loading="lazy">
+                  </picture>
+                  <div class="reviews__heading">
+                    <h3 class="reviews__name">Арина Наумова</h3>
+                    <p class="reviews__age">34 года</p>
+                  </div>
                 </div>
-              </div>
-              <div class="reviews__text">
-                <p>Равным образом, идейные соображения высшего порядка, а также разбавленное изрядной долей эмпатии, рациональное мышление требует от нас анализа переосмысления внешнеэкономических политик.</p>
-                <p>Таким образом, высокотехнологичная концепция общественного уклада способствует повышению качества экономической целесообразности принимаемых решений. Также как синтетическое тестирование создаёт предпосылки для приоритизации разума!</p>
-                <a class="reviews__link-more" href="#!">Читать полностью</a>
-              </div>
-              <a class="button button--plus" href="#!">
-                <span>Попробовать тоже</span>
-              </a>
-            </div>
-            <div class="reviews__item">
-              <div class="reviews__author">
-                <picture class="reviews__photo">
-                  <source srcset="img/review_author-04-desktop.webp" media="(min-width: 1920px)" type="image/webp">
-                  <source srcset="img/review_author-04-mobile.webp" type="image/webp">
-                  <source srcset="img/review_author-04-desktop.jpg" media="(min-width: 1920px)">
-                  <source srcset="img/review_author-04-mobile.jpg">
-                  <img src="img/review_author-04-desktop.jpg" alt="Автор отзыва Елена Снежная" width="180" height="180" loading="lazy">
-                </picture>
-                <div class="reviews__heading">
-                  <h3 class="reviews__name">Елена Снежная</h3>
-                  <p class="reviews__age">36 лет</p>
+                <div class="reviews__text">
+                  <p>И нет сомнений, что ключевые особенности структуры проекта являются только методом политического участия и заблокированы в рамках своих собственных рациональных ограничений.</p>
+                  <p>Являясь всего лишь частью общей картины, представители современных социальных резервов преданы социально-демократической анафеме. Не следует, однако, забывать, что высокотехнологичная концепция общественного уклада.</p>
+                  <a class="reviews__link-more" href="#!">Читать полностью</a>
                 </div>
+                <a class="button button--plus" href="#!">
+                  <span>Попробовать тоже</span>
+                </a>
               </div>
-              <div class="reviews__text">
-                <p>Таким образом, значимость этих проблем настолько очевидна, что высокое качество позиционных исследований предопределяет высокую востребованность поставленных обществом задач.</p>
-                <p>Внезапно, действия представителей оппозиции формируют глобальную экономическую сеть и при этом - смешаны с не уникальными данными до степени совершенной неузнаваемости, из-за чего возрастает их статус бесполезности.</p>
-                <a class="reviews__link-more" href="#!">Читать полностью</a>
-              </div>
-              <a class="button button--plus" href="#!">
-                <span>Попробовать тоже</span>
-              </a>
-            </div>
-            <div class="reviews__item">
-              <div class="reviews__author">
-                <picture class="reviews__photo">
-                  <source srcset="img/review_author-05-desktop.webp" media="(min-width: 1920px)" type="image/webp">
-                  <source srcset="img/review_author-05-mobile.webp" type="image/webp">
-                  <source srcset="img/review_author-05-desktop.jpg" media="(min-width: 1920px)">
-                  <source srcset="img/review_author-05-mobile.jpg">
-                  <img src="img/review_author-05-desktop.jpg" alt="Автор отзыва Юлиана Ветрова" width="180" height="180" loading="lazy">
-                </picture>
-                <div class="reviews__heading">
-                  <h3 class="reviews__name">Юлиана Ветрова</h3>
-                  <p class="reviews__age">34 года</p>
+              <div class="reviews__item">
+                <div class="reviews__author">
+                  <picture class="reviews__photo">
+                    <source srcset="img/review_author-03-desktop.webp" media="(min-width: 1920px)" type="image/webp">
+                    <source srcset="img/review_author-03-mobile.webp" type="image/webp">
+                    <source srcset="img/review_author-03-desktop.jpg" media="(min-width: 1920px)">
+                    <source srcset="img/review_author-03-mobile.jpg">
+                    <img src="img/review_author-03-desktop.jpg" alt="Автор отзыва Виталий Коробко" width="180" height="180" loading="lazy">
+                  </picture>
+                  <div class="reviews__heading">
+                    <h3 class="reviews__name">Виталий Коробко</h3>
+                    <p class="reviews__age">33 года</p>
+                  </div>
                 </div>
+                <div class="reviews__text">
+                  <p>Равным образом, идейные соображения высшего порядка, а также разбавленное изрядной долей эмпатии, рациональное мышление требует от нас анализа переосмысления внешнеэкономических политик.</p>
+                  <p>Таким образом, высокотехнологичная концепция общественного уклада способствует повышению качества экономической целесообразности принимаемых решений. Также как синтетическое тестирование создаёт предпосылки для приоритизации разума!</p>
+                  <a class="reviews__link-more" href="#!">Читать полностью</a>
+                </div>
+                <a class="button button--plus" href="#!">
+                  <span>Попробовать тоже</span>
+                </a>
               </div>
-              <div class="reviews__text">
-                <p>Как принято считать, представители современных социальных резервов, превозмогая сложившуюся непростую экономическую ситуацию, представлены в исключительно положительном свете.</p>
-                <p>Каждый из нас понимает очевидную вещь: постоянный количественный рост и сфера нашей активности однозначно фиксирует необходимость поставленных обществом задач. Как принято считать, интерактивные прототипы разоблачены.</p>
-                <a class="reviews__link-more" href="#!">Читать полностью</a>
+              <div class="reviews__item">
+                <div class="reviews__author">
+                  <picture class="reviews__photo">
+                    <source srcset="img/review_author-04-desktop.webp" media="(min-width: 1920px)" type="image/webp">
+                    <source srcset="img/review_author-04-mobile.webp" type="image/webp">
+                    <source srcset="img/review_author-04-desktop.jpg" media="(min-width: 1920px)">
+                    <source srcset="img/review_author-04-mobile.jpg">
+                    <img src="img/review_author-04-desktop.jpg" alt="Автор отзыва Елена Снежная" width="180" height="180" loading="lazy">
+                  </picture>
+                  <div class="reviews__heading">
+                    <h3 class="reviews__name">Елена Снежная</h3>
+                    <p class="reviews__age">36 лет</p>
+                  </div>
+                </div>
+                <div class="reviews__text">
+                  <p>Таким образом, значимость этих проблем настолько очевидна, что высокое качество позиционных исследований предопределяет высокую востребованность поставленных обществом задач.</p>
+                  <p>Внезапно, действия представителей оппозиции формируют глобальную экономическую сеть и при этом - смешаны с не уникальными данными до степени совершенной неузнаваемости, из-за чего возрастает их статус бесполезности.</p>
+                  <a class="reviews__link-more" href="#!">Читать полностью</a>
+                </div>
+                <a class="button button--plus" href="#!">
+                  <span>Попробовать тоже</span>
+                </a>
               </div>
-              <a class="button button--plus" href="#!">
-                <span>Попробовать тоже</span>
-              </a>
+              <div class="reviews__item">
+                <div class="reviews__author">
+                  <picture class="reviews__photo">
+                    <source srcset="img/review_author-05-desktop.webp" media="(min-width: 1920px)" type="image/webp">
+                    <source srcset="img/review_author-05-mobile.webp" type="image/webp">
+                    <source srcset="img/review_author-05-desktop.jpg" media="(min-width: 1920px)">
+                    <source srcset="img/review_author-05-mobile.jpg">
+                    <img src="img/review_author-05-desktop.jpg" alt="Автор отзыва Юлиана Ветрова" width="180" height="180" loading="lazy">
+                  </picture>
+                  <div class="reviews__heading">
+                    <h3 class="reviews__name">Юлиана Ветрова</h3>
+                    <p class="reviews__age">34 года</p>
+                  </div>
+                </div>
+                <div class="reviews__text">
+                  <p>Как принято считать, представители современных социальных резервов, превозмогая сложившуюся непростую экономическую ситуацию, представлены в исключительно положительном свете.</p>
+                  <p>Каждый из нас понимает очевидную вещь: постоянный количественный рост и сфера нашей активности однозначно фиксирует необходимость поставленных обществом задач. Как принято считать, интерактивные прототипы разоблачены.</p>
+                  <a class="reviews__link-more" href="#!">Читать полностью</a>
+                </div>
+                <a class="button button--plus" href="#!">
+                  <span>Попробовать тоже</span>
+                </a>
+              </div>
             </div>
-          </div>
-          <div class="reviews__nav-buttons">
-            <button class="button-arrow button-arrow--left" type="button">
-              <svg width="6" height="6" viewBox="0 0 6 6"><use href="#icon-triangle"></use></svg>
-              <span>Предыдущий отзыв</span>
-            </button>
-            <button class="button-arrow button-arrow--right" type="button">
-              <svg width="6" height="6" viewBox="0 0 6 6"><use href="#icon-triangle"></use></svg>
-              <span>Следующий отзыв</span>
-            </button>
-          </div>
-          <div class="pagination reviews__pagination">
-            <button class="pagination__button pagination__button--active" type="button" data-text="Client">Жанна Блиц</button>
-            <button class="pagination__button" type="button" data-text="Client">Арина Наумова</button>
-            <button class="pagination__button" type="button" data-text="Client">Виталий Коробко</button>
-            <button class="pagination__button" type="button" data-text="Client">Елена Снежная</button>
-            <button class="pagination__button" type="button" data-text="Client">Юлиана Ветрова</button>
+            <div class="reviews__nav-buttons">
+              <button class="button-arrow button-arrow--left" type="button">
+                <svg width="6" height="6" viewBox="0 0 6 6"><use href="#icon-triangle"></use></svg>
+                <span>Предыдущий отзыв</span>
+              </button>
+              <button class="button-arrow button-arrow--right" type="button">
+                <svg width="6" height="6" viewBox="0 0 6 6"><use href="#icon-triangle"></use></svg>
+                <span>Следующий отзыв</span>
+              </button>
+            </div>
+            <div class="pagination reviews__pagination">
+              <button class="pagination__button pagination__button--active" type="button" data-text="Client">Жанна Блиц</button>
+              <button class="pagination__button" type="button" data-text="Client">Арина Наумова</button>
+              <button class="pagination__button" type="button" data-text="Client">Виталий Коробко</button>
+              <button class="pagination__button" type="button" data-text="Client">Елена Снежная</button>
+              <button class="pagination__button" type="button" data-text="Client">Юлиана Ветрова</button>
+            </div>
           </div>
         </div>
       </section>
-      <section class="section entry entry--second">
-        <h2 class="section__title">Пробное занятие</h2>
-        <div class="entry__wrapper">
-          <div class="entry__content">
-            <h3 class="entry__title">
-              <span>10%</span>
-              скидка на абонемент
-            </h3>
-            <p class="entry__text">Хотите скидку на абонемент? Приведите&nbsp;с&nbsp;собой друзей и получите -10%&nbsp;за&nbsp;каждого пришедшего</p>
-            <form class="form entry__form" action="#" method="post">
-              <input class="form__input" type="text" name="name" placeholder="Ваше имя" aria-label="Ваше имя">
-              <input class="form__input" type="tel" name="phone" placeholder="Ваш телефон" aria-label="Ваш телефон">
-              <button class="button button--envelope form__button" type="submit">
-                <span>Отправить заявку</span>
-              </button>
-              <small class="form__consent">Нажимая «Отправить заявку», вы даете <a href="#!">согласие</a> на&nbsp;обработку своих персональных данных</small>
-            </form>
-          </div>
-          <div class="entry__message entry__message--hidden">
-            <b class="entry__message-title">Спасибо!</b>
-            <p class="entry__message-text">Мы свяжемся с вами в течение 15 минут...</p>
+      <section class="section entry entry--second" id="entry2" data-title="Оставить заявку">
+        <div class="section__wrapper">
+          <h2 class="section__title">Пробное занятие</h2>
+          <div class="entry__wrapper">
+            <div class="entry__content">
+              <h3 class="entry__title">
+                <span>10%</span>
+                скидка на абонемент
+              </h3>
+              <p class="entry__text">Хотите скидку на абонемент? Приведите&nbsp;с&nbsp;собой друзей и получите -10%&nbsp;за&nbsp;каждого пришедшего</p>
+              <form class="form entry__form" action="#" method="post">
+                <input class="form__input" type="text" name="name" placeholder="Ваше имя" aria-label="Ваше имя">
+                <input class="form__input" type="tel" name="phone" placeholder="Ваш телефон" aria-label="Ваш телефон">
+                <button class="button button--envelope form__button" type="submit">
+                  <span>Отправить заявку</span>
+                </button>
+                <small class="form__consent">Нажимая «Отправить заявку», вы даете <a href="#!">согласие</a> на&nbsp;обработку своих персональных данных</small>
+              </form>
+            </div>
+            <div class="entry__message entry__message--hidden">
+              <b class="entry__message-title">Спасибо!</b>
+              <p class="entry__message-text">Мы свяжемся с вами в течение 15 минут...</p>
+            </div>
           </div>
         </div>
       </section>
       <section class="section contacts" id="contacts">
-        <h2 class="section__title">Контакты</h2>
-        <div class="contacts__wrapper">
-          <div class="contacts__map"></div>
-          <address class="contacts__content">
-            <dl class="contacts__list">
-              <dt class="contacts__list-title">Адрес:</dt>
-              <dd class="contacts__list-info">СПб, Невский проспект 108</dd>
-              <dt class="contacts__list-title">Email:</dt>
-              <dd class="contacts__list-info">
-                <a href="mailto:Lotos-yoga@gmail.com">Lotos-yoga@gmail.com</a>
-              </dd>
-            </dl>
-            <div class="contacts__links">
-              <a class="contacts__link contacts__link--location" href="https://yandex.ru/maps/-/CCQd6FA~tD" target="_blank">Смотреть на карте</a>
-              <a class="contacts__link contacts__link--envelope" href="#feedback">Оставить отзыв</a>
-            </div>
-            <small class="contacts__copyright">© 2018 — ООО “Центр йоги Лотос”</small>
-            <a class="button button--plus" href="#!">
-              <span>Записаться онлайн</span>
-            </a>
-          </address>
-          <div class="modal modal--hidden contacts__modal" id="feedback">
-            <b class="modal__title">Для нас очень важно ваше мнение</b>
-            <form class="form form--modal modal__form" action="#" method="post">
-              <input class="form__input" type="text" name="name" placeholder="Ваше имя" aria-label="Ваше имя">
-              <textarea class="form__message" name="message" placeholder="Ваш отзыв" aria-label="Ваш отзыв"></textarea>
-              <button class="button button--envelope form__button" type="submit">
-                <span>Отправить отзыв</span>
+        <div class="section__wrapper">
+          <h2 class="section__title">Контакты</h2>
+          <div class="contacts__wrapper">
+            <div class="contacts__map"></div>
+            <address class="contacts__content">
+              <dl class="contacts__list">
+                <dt class="contacts__list-title">Адрес:</dt>
+                <dd class="contacts__list-info">СПб, Невский проспект 108</dd>
+                <dt class="contacts__list-title">Email:</dt>
+                <dd class="contacts__list-info">
+                  <a href="mailto:Lotos-yoga@gmail.com">Lotos-yoga@gmail.com</a>
+                </dd>
+              </dl>
+              <div class="contacts__links">
+                <a class="contacts__link contacts__link--location" href="https://yandex.ru/maps/-/CCQd6FA~tD" target="_blank">Смотреть на карте</a>
+                <a class="contacts__link contacts__link--envelope" href="#feedback">Оставить отзыв</a>
+              </div>
+              <small class="contacts__copyright">© 2018 — ООО “Центр йоги Лотос”</small>
+              <a class="button button--plus" href="#!">
+                <span>Записаться онлайн</span>
+              </a>
+            </address>
+            <div class="modal modal--hidden contacts__modal" id="feedback">
+              <b class="modal__title">Для нас очень важно ваше мнение</b>
+              <form class="form form--modal modal__form" action="#" method="post">
+                <input class="form__input" type="text" name="name" placeholder="Ваше имя" aria-label="Ваше имя">
+                <textarea class="form__message" name="message" placeholder="Ваш отзыв" aria-label="Ваш отзыв"></textarea>
+                <button class="button button--envelope form__button" type="submit">
+                  <span>Отправить отзыв</span>
+                </button>
+                <small class="form__consent">Нажимая «Отправить отзыв», вы даете <a href="#!">согласие</a> на&nbsp;обработку своих персональных данных</small>
+              </form>
+              <button class="button-close button-close--round modal__close" type="button">
+                <span class="visually-hidden">Закрыть</span>
               </button>
-              <small class="form__consent">Нажимая «Отправить отзыв», вы даете <a href="#!">согласие</a> на&nbsp;обработку своих персональных данных</small>
-            </form>
-            <button class="button-close button-close--round modal__close" type="button">
-              <span class="visually-hidden">Закрыть</span>
-            </button>
+            </div>
+            <div class="overlay"></div>
           </div>
-          <div class="overlay"></div>
         </div>
       </section>
     </main>
+    <script src="js/scrolloverflow.min.js"></script>
+    <script src="js/fullpage.min.js"></script>
     <script src="js/script.min.js"></script>
   </body>
 </html>

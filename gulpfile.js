@@ -70,6 +70,43 @@ function js() {
 }
 exports.js = js;
 
+// Минификация файлов библиотек *.css
+function csslibs() {
+  return src(`node_modules/fullpage.js/dist/fullpage.css`)
+    .pipe(sourcemaps.init())
+    .pipe(cleanCSS({
+      level: {
+        1: {
+          specialComments: false
+        }
+      }
+    }))
+    .pipe(rename({
+      suffix: `.min`
+    }))
+    .pipe(sourcemaps.write(`.`))
+    .pipe(dest(`build/css`))
+}
+exports.csslibs = csslibs;
+
+// Минификация файлов библиотек *.js
+function jslibs() {
+  return pipeline(
+    src([
+      `node_modules/fullpage.js/dist/fullpage.js`,
+      `node_modules/fullpage.js/vendors/scrolloverflow.js`
+    ]),
+    sourcemaps.init(),
+    uglify(),
+    rename({
+      suffix: `.min`
+    }),
+    sourcemaps.write(`.`),
+    dest(`build/js`)
+  );
+}
+exports.jslibs = jslibs;
+
 // Генерация файла библиотеки Modernizr
 function modzr() {
   return src(`fake`, {
@@ -80,10 +117,12 @@ function modzr() {
       crawl: false,
       tests: [`webp`]
     }))
+    .pipe(sourcemaps.init())
     .pipe(uglify())
     .pipe(rename({
       suffix: `.min`
     }))
+    .pipe(sourcemaps.write(`.`))
     .pipe(dest(`build/js`));
 }
 exports.modzr = modzr;
@@ -193,6 +232,8 @@ exports.build = series(
     copy,
     css,
     js,
+    csslibs,
+    jslibs,
     modzr,
     series(sprite, html)
   )
@@ -205,6 +246,8 @@ exports.start = series(
     copy,
     css,
     js,
+    csslibs,
+    jslibs,
     modzr,
     series(sprite, html)
   ),
