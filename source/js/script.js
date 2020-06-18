@@ -136,6 +136,45 @@ const scheduleScroll = new ScrollBooster({
   }
 });
 
+/* -----------------------------
+  Всплывающее окно формы отзывов
+  ------------------------------ */
+const contactsContent = document.querySelector(`.contacts__content`);
+const contactsModal = document.querySelector(`.contacts__modal`);
+const contactsModalOpenBtn = contactsContent.querySelector(`.contacts__link--envelope`);
+const contactsModalCloseBtn = contactsModal.querySelector(`.modal__close`);
+const overlay = document.querySelector(`.overlay`);
+
+// Появление всплывающего окна
+contactsModalOpenBtn.onclick = (evt) => {
+  evt.preventDefault();
+  contactsContent.classList.add(`contacts__content--hidden`);
+  overlay.classList.add(`overlay--shown`);
+  contactsModal.classList.remove(`modal--hidden`);
+};
+
+// Закрытие всплывающего окна
+contactsModalCloseBtn.onclick = (evt) => {
+  evt.preventDefault();
+  modalClose();
+};
+
+// Закрытие всплывающего окна клавишей ESC
+window.onkeydown = (evt) => {
+  if (evt.keyCode === 27) {
+    evt.preventDefault();
+
+    if (!contactsModal.classList.contains(`modal--hidden`)) {
+      modalClose();
+    }
+  }
+};
+
+// Закрытие всплывающего окна по клику вне окна
+overlay.onclick = () => {
+  modalClose();
+};
+
 /* -----------------------
   Пользовательские функции
   ------------------------ */
@@ -179,6 +218,13 @@ function changeScrollBtn(btn, section) {
 // Добавление ведущего нуля к числу
 function addLeadingZero(num) {
   return num > 9 ? num : `0` + num;
+}
+
+// Закрытие всплывающего окна
+function modalClose() {
+  contactsModal.classList.add(`modal--hidden`);
+  overlay.classList.remove(`overlay--shown`);
+  contactsContent.classList.remove(`contacts__content--hidden`);
 }
 
 // Создание объекта опций для слайдеров
