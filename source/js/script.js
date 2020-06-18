@@ -117,6 +117,25 @@ const abonementsScroll = new ScrollBooster({
   }
 });
 
+// Добавление скролла таблице расписания
+const scheduleScroll = new ScrollBooster({
+  viewport: document.querySelector(`.schedule__table-main`),
+  scrollMode: `transform`,
+  direction: `horizontal`,
+  onUpdate(state) {
+    const scheduleTable = document.querySelector(`.schedule__table`);
+
+    if (state.borderCollision.left) {
+      scheduleTable.classList.remove(`schedule__table--swiped`);
+    } else {
+      scheduleTable.classList.add(`schedule__table--swiped`);
+    }
+  },
+  shouldScroll(state, event) {
+    return event.view.innerWidth < 1449;
+  }
+});
+
 /* -----------------------
   Пользовательские функции
   ------------------------ */

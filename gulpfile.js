@@ -70,44 +70,25 @@ function js() {
 }
 exports.js = js;
 
-// Минификация файлов библиотек *.css
+// Копирование файлов библиотек *.css
 function csslibs() {
   return src([
-    `node_modules/fullpage.js/dist/fullpage.css`,
-    `node_modules/swiper/css/swiper.css`
+    `node_modules/fullpage.js/dist/fullpage.min.{css,css.map}`,
+    `node_modules/swiper/css/swiper.min.{css,css.map}`
   ])
-    .pipe(sourcemaps.init())
-    .pipe(cleanCSS({
-      level: {
-        1: {
-          specialComments: false
-        }
-      }
-    }))
-    .pipe(rename({
-      suffix: `.min`
-    }))
-    .pipe(sourcemaps.write(`.`))
-    .pipe(dest(`build/css`))
+    .pipe(dest(`build/css`));
 }
 exports.csslibs = csslibs;
 
-// Минификация файлов библиотек *.js
+// Копирование файлов библиотек *.js
 function jslibs() {
-  return pipeline(
-    src([
-      `node_modules/fullpage.js/dist/fullpage.js`,
-      `node_modules/fullpage.js/vendors/scrolloverflow.js`,
-      `node_modules/swiper/js/swiper.js`
-    ]),
-    sourcemaps.init(),
-    uglify(),
-    rename({
-      suffix: `.min`
-    }),
-    sourcemaps.write(`.`),
-    dest(`build/js`)
-  );
+  return src([
+    `node_modules/fullpage.js/dist/fullpage.min.{js,js.map}`,
+    `node_modules/fullpage.js/vendors/scrolloverflow.min.{js,js.map}`,
+    `node_modules/swiper/js/swiper.min.{js,js.map}`,
+    `node_modules/scrollbooster/dist/scrollbooster.min.{js,js.map}`
+  ])
+    .pipe(dest(`build/js`));
 }
 exports.jslibs = jslibs;
 

@@ -39,6 +39,7 @@
   },
   "dependencies": {
     "fullpage.js": "^3.0.8",
+    "scrollbooster": "^3.0.2",
     "swiper": "^5.4.5"
   }
 }

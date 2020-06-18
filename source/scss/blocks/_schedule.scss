@@ -2,14 +2,22 @@
   @extend %container;
   display: flex;
   max-width: 1920px;
+
+  @media (max-width: 1919px) {
+    padding-right: 0;
+  }
 }
 
 .schedule__table {
   display: flex;
-  width: 1419px;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1419px;
   margin: auto;
   padding-top: 75px;
+  padding-right: 20px;
   padding-bottom: 75px;
+  overflow: hidden;
 
   table {
     height: 100%;
@@ -52,18 +60,23 @@
 
   @media (min-width: 768px) {
     padding-top: 140px;
+    padding-right: 30px;
     padding-bottom: 140px;
   }
 
   @media (min-width: 1920px) {
     padding-top: 90px;
+    padding-right: 0;
     padding-bottom: 90px;
   }
 }
 
 .schedule__table-left {
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
   width: 201px;
-  border-right: 2px solid transparent;
+  border-right: 2px solid $colorBackground;
 
   th {
     position: relative;
@@ -177,5 +190,9 @@
 }
 
 .schedule__table-main {
-  width: 1216px;
+  width: calc(100% - 203px);
+
+  table {
+    width: 1216px;
+  }
 }
