@@ -104,6 +104,19 @@ for (let i = 0; i < entryContent.length; i++) {
   };
 }
 
+/* ---------------------------
+  Скролл перетаскиванием мышью
+  ---------------------------- */
+// Добавление скролла форме блока абонементов
+const abonementsScroll = new ScrollBooster({
+  viewport: document.querySelector(`.abonements__form-inner`),
+  scrollMode: `transform`,
+  direction: `horizontal`,
+  shouldScroll(state, event) {
+    return event.view.innerWidth < 604;
+  }
+});
+
 /* -----------------------
   Пользовательские функции
   ------------------------ */

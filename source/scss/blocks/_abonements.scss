@@ -36,6 +36,7 @@
 }
 
 .abonements__form {
+  width: 100%;
   margin-top: auto;
   margin-bottom: auto;
   padding-top: 90px;
@@ -48,32 +49,52 @@
   }
 }
 
-.abonements__fields {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  width: 564px;
+.abonements__form-inner {
+  width: 100%;
   margin-bottom: 40px;
-
-  @supports (display: grid) {
-    display: grid;
-    grid-template-columns: repeat(2, 280px);
-    gap: 4px;
-  }
 
   @media (min-width: 768px) {
     margin-bottom: 60px;
   }
 }
 
+.abonements__fields {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 564px;
+
+  @supports (display: grid) {
+    display: grid;
+    grid-template-columns: repeat(2, 280px);
+    gap: 4px;
+  }
+}
+
 .abonements__field {
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
   width: 280px;
   height: 140px;
   margin-bottom: 4px;
+  padding: 28px 20px 32px 40px;
   background-color: $colorWhite;
+  transition: box-shadow 0.3s;
 
   &:nth-last-child(-n+2) {
     margin-bottom: 0;
+  }
+
+  @each $state in hover, focus-within {
+    &:#{$state} {
+      z-index: 2;
+      box-shadow: 0 0 30px rgba($colorBlack, 0.1);
+    }
+  }
+
+  &:active {
+    box-shadow: none;
   }
 
   @supports (display: grid) {
@@ -82,15 +103,10 @@
 }
 
 .abonements__label {
-  position: relative;
-  box-sizing: border-box;
   display: block;
-  width: 100%;
-  padding: 28px 80px 32px 40px;
   font-size: $fontSizeTextDesktop;
   line-height: $lineHeightTitleSmall;
   cursor: pointer;
-  transition: box-shadow 0.3s;
   user-select: none;
 
   &::before,
@@ -99,6 +115,7 @@
     position: absolute;
     top: 50%;
     right: 20px;
+    z-index: -1;
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -119,12 +136,16 @@
     position: absolute;
     top: 50%;
     right: 34px;
-    z-index: 1;
     width: 12px;
     height: 12px;
     transform: translateY(-50%);
     transition: fill 0.3s;
     fill: rgba($colorBlack, 0.2);
+  }
+
+  span {
+    display: block;
+    padding-right: 60px;
   }
 
   b {
@@ -139,17 +160,6 @@
       background: $gradientVertical $colorPrimary;
       background-clip: text;
     }
-  }
-
-  &:hover,
-  input:focus + & {
-    z-index: 1;
-    outline: none;
-    box-shadow: 0 0 30px rgba($colorBlack, 0.1);
-  }
-
-  &:active {
-    box-shadow: none;
   }
 
   input:checked + & {
