@@ -29,6 +29,8 @@
 .reviews__wrapper {
   @extend %container;
   position: relative;
+  margin-right: 0;
+  margin-left: 0;
 }
 
 .reviews__list {

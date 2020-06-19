@@ -29,6 +29,8 @@
 .classes__wrapper {
   @extend %container;
   position: relative;
+  margin-right: 0;
+  margin-left: 0;
 }
 
 .classes__list {
