@@ -1,0 +1,9 @@
+// Подключаем шрифт Geometria
+@include font-face("Geometria", "ExtraLight", $fontWeightExtraLight);
+@include font-face("Geometria", "Light", $fontWeightLight);
+@include font-face("Geometria", "Regular");
+@include font-face("Geometria", "Medium", $fontWeightMedium);
+@include font-face("Geometria", "Bold", $fontWeightBold);
+
+// Подключаем шрифт Montserrat
+@include font-face("Montserrat", "Regular");

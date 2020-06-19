@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0">
+  <defs>
+    <linearGradient id="gradientHorizontal">
+      <stop offset="-0.25" stop-color="#fc66a2"/>
+      <stop offset="1.25" stop-color="#f78e6a"/>
+    </linearGradient>
+    <linearGradient id="gradientVertical" x2="0%" y2="100%">
+      <stop offset="-0.25" stop-color="#fc66a2"/>
+      <stop offset="1.25" stop-color="#f78e6a"/>
+    </linearGradient>
+    <linearGradient id="gradientVerticalInverse" y1="100%" x2="0%">
+      <stop offset="-0.25" stop-color="#fc66a2"/>
+      <stop offset="1.25" stop-color="#f78e6a"/>
+    </linearGradient>
+  </defs>
+</svg>

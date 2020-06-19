@@ -1,0 +1,44 @@
+.modal {
+  position: relative;
+  width: 335px;
+  padding-top: 61px;
+  padding-bottom: 69px;
+
+  &--hidden {
+    display: none;
+  }
+
+  &:target {
+    display: block;
+  }
+
+  @media (min-width: 768px) {
+    width: 437px;
+  }
+}
+
+.modal__title {
+  display: block;
+  margin-bottom: 20px;
+  font-weight: $fontWeightLight;
+  font-size: $fontSizeTitleMobile;
+  line-height: $lineHeightTitleLarge;
+  text-align: center;
+
+  @media (min-width: 768px) {
+    margin-bottom: 48px;
+    font-size: $fontSizeTitleDesktop;
+    text-align: left;
+  }
+}
+
+.modal__close {
+  position: absolute;
+  top: 28px;
+  right: -4px;
+
+  @media (min-width: 768px) {
+    top: 51px;
+    right: 0;
+  }
+}

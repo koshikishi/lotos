@@ -70,6 +70,28 @@ function js() {
 }
 exports.js = js;
 
+// Копирование файлов библиотек *.css
+function csslibs() {
+  return src([
+    `node_modules/fullpage.js/dist/fullpage.min.{css,css.map}`,
+    `node_modules/swiper/css/swiper.min.{css,css.map}`
+  ])
+    .pipe(dest(`build/css`));
+}
+exports.csslibs = csslibs;
+
+// Копирование файлов библиотек *.js
+function jslibs() {
+  return src([
+    `node_modules/fullpage.js/dist/fullpage.min.{js,js.map}`,
+    `node_modules/fullpage.js/vendors/scrolloverflow.min.{js,js.map}`,
+    `node_modules/swiper/js/swiper.min.{js,js.map}`,
+    `node_modules/scrollbooster/dist/scrollbooster.min.{js,js.map}`
+  ])
+    .pipe(dest(`build/js`));
+}
+exports.jslibs = jslibs;
+
 // Генерация файла библиотеки Modernizr
 function modzr() {
   return src(`fake`, {
@@ -80,10 +102,12 @@ function modzr() {
       crawl: false,
       tests: [`webp`]
     }))
+    .pipe(sourcemaps.init())
     .pipe(uglify())
     .pipe(rename({
       suffix: `.min`
     }))
+    .pipe(sourcemaps.write(`.`))
     .pipe(dest(`build/js`));
 }
 exports.modzr = modzr;
@@ -193,6 +217,8 @@ exports.build = series(
     copy,
     css,
     js,
+    csslibs,
+    jslibs,
     modzr,
     series(sprite, html)
   )
@@ -205,6 +231,8 @@ exports.start = series(
     copy,
     css,
     js,
+    csslibs,
+    jslibs,
     modzr,
     series(sprite, html)
   ),

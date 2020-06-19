@@ -1,0 +1,119 @@
+.button-arrow {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 0;
+  padding-right: 30px;
+  font-weight: $fontWeightNormal;
+  font-size: $fontSizeTextMobile;
+  line-height: $lineHeightNormal;
+  vertical-align: middle;
+  color: inherit;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  background: none;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+
+  &::before {
+    background-color: $colorWhite;
+  }
+
+  &::after {
+    background-image: $gradientVertical;
+    transition: opacity 0.3s;
+  }
+
+  svg {
+    position: absolute;
+    top: 13px;
+    right: 12px;
+    z-index: 1;
+    fill: $colorWhite;
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+
+    &::after {
+      opacity: 0;
+    }
+
+    svg {
+      fill: url("#gradientVertical") $colorWhite;
+    }
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+
+  &--up {
+    svg {
+      top: 11px;
+      transform: scaleY(-1);
+    }
+
+    &:hover,
+    &:focus {
+      svg {
+        fill: url("#gradientVerticalInverse") $colorWhite;
+      }
+    }
+  }
+
+  &--right {
+    svg {
+      right: 11px;
+      transform: rotate(90deg) scaleY(-1);
+    }
+  }
+
+  &--left {
+    svg {
+      right: 13px;
+      transform: rotate(90deg);
+    }
+  }
+
+  &--right,
+  &--left {
+    pointer-events: auto;
+
+    svg {
+      top: 12px;
+    }
+
+    &:hover,
+    &:focus {
+      svg {
+        fill: url("#gradientHorizontal") $colorWhite;
+      }
+    }
+  }
+
+  @media (max-width: 1919px) {
+    span {
+      @include visually-hidden;
+    }
+  }
+
+  @media (min-width: 1920px) {
+    padding-top: 6px;
+    padding-right: 38px;
+  }
+}

@@ -1,3 +1,20 @@
+%container {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 438px;
+  padding: 20px;
+
+  @media (min-width: 768px) {
+    max-width: 768px;
+    padding: 30px;
+  }
+
+  @media (min-width: 1920px) {
+    max-width: 1920px;
+    padding: 70px 90px;
+  }
+}
+
 %list-reset {
   margin-top: 0;
   margin-bottom: 0;

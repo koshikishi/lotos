@@ -36,5 +36,10 @@
     "posthtml-include": "^1.4.3",
     "readable-stream": "^3.6.0",
     "scss-resets": "^0.5.2"
+  },
+  "dependencies": {
+    "fullpage.js": "^3.0.8",
+    "scrollbooster": "^3.0.2",
+    "swiper": "^5.4.5"
   }
 }

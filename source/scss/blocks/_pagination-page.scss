@@ -1,0 +1,54 @@
+.pagination-page {
+  display: flex;
+  flex-direction: column;
+  line-height: $lineHeightNormal;
+  color: $colorPrimary;
+
+  .no-js & {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    text-align: center;
+  }
+}
+
+.pagination-page__current {
+  margin-bottom: -1px;
+  font-size: $fontSizeTitleSmall;
+
+  @supports (background-clip: text) {
+    color: transparent;
+    background: $gradientHorizontal $colorPrimary;
+    background-clip: text;
+  }
+
+  @media (min-width: 768px) {
+    margin-bottom: 4px;
+    font-size: $fontSizeTitleLarge;
+  }
+
+  @media (min-width: 1920px) {
+    margin-bottom: 3px;
+  }
+}
+
+.pagination-page__total {
+  font-size: $fontSizeTextSmall;
+
+  @supports (background-clip: text) {
+    color: transparent;
+    background: $gradientHorizontal $colorPrimary;
+    background-clip: text;
+  }
+
+  &::before {
+    content: "- ";
+  }
+
+  @media (min-width: 768px) {
+    align-self: flex-end;
+    padding-right: 4px;
+    font-size: $fontSizeTitleSmall;
+  }
+}

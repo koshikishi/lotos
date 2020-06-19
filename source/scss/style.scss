@@ -8,7 +8,37 @@
 @import "misc/fonts";
 
 // Подключаем шаблонные и вспомогательные классы
-@import "misc/extends", "blocks/visually-hidden";
+@import "misc/extends", "blocks/visually-hidden", "blocks/overlay";
+
+// Подключаем анимацию
+@import "misc/animations";
 
 // Подключаем основные стили
-@import "misc/base";
+@import "misc/base", "blocks/page", "blocks/section", "blocks/button", "blocks/button-arrow", "blocks/button-close", "blocks/pagination";
+
+// Подключаем стили шапки
+@import "blocks/header", "blocks/menu", "blocks/logo", "blocks/pagination-page", "blocks/social";
+
+// Подключаем стили hero-блока
+@import "blocks/hero";
+
+// Подключаем стили блока направлений
+@import "blocks/classes";
+
+// Подключаем стили блока акции
+@import "blocks/entry", "blocks/form";
+
+// Подключаем стили блока тренеров
+@import "blocks/coaches";
+
+// Подключаем стили блока абонементов
+@import "blocks/abonements";
+
+// Подключаем стили блока расписания
+@import "blocks/schedule";
+
+// Подключаем стили блока отзывов
+@import "blocks/reviews";
+
+// Подключаем стили блока контактов
+@import "blocks/contacts", "blocks/modal";

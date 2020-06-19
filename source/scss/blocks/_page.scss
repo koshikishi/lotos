@@ -1,0 +1,16 @@
+.page {
+  min-width: 375px;
+  margin: 0;
+  font: $fontWeightLight #{$fontSizeTextMobile}/#{$lineHeightTextLarge} $fontFamily;
+  color: $colorBlack;
+  background-color: $colorBackground;
+
+  @media (min-width: 1920px) {
+    font-size: $fontSizeTextDesktop;
+  }
+}
+
+.page__header {
+  position: relative;
+  z-index: 3;
+}

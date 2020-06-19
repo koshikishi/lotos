@@ -1,0 +1,81 @@
+.button {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  min-width: 250px;
+  max-width: 100%;
+  min-height: 60px;
+  padding: 20px 50px 20px 80px;
+  font-weight: $fontWeightNormal;
+  font-size: $fontSizeTextMobile;
+  line-height: $lineHeightNormal;
+  vertical-align: middle;
+  color: $colorWhite;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  background-color: $colorPrimary;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 0 50px rgba($colorBlack, 0.1);
+  cursor: pointer;
+  transition-duration: 0.3s;
+  transition-property: color, background-color, box-shadow;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    background:
+      center no-repeat,
+      $gradientHorizontal $colorPrimary;
+    border-radius: 50%;
+  }
+
+  @each $icon, $size in plus 16px, envelope 18px, check 13px {
+    &--#{$icon} {
+      &::before {
+        background-image:
+          url("../img/icon_#{$icon}.svg"),
+          $gradientHorizontal;
+        background-size:
+          $size,
+          auto;
+      }
+    }
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+    color: $colorPrimary;
+    background-color: $colorWhite;
+
+    @supports (background-clip: text) {
+      color: transparent;
+
+      span {
+        background: $gradientHorizontal $colorPrimary;
+        background-clip: text;
+      }
+    }
+  }
+
+  &:active {
+    box-shadow: none;
+  }
+
+  .form--modal & {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+
+    @media (min-width: 768px) {
+      display: inline-block;
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+}
