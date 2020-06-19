@@ -19,6 +19,11 @@
   padding-bottom: 75px;
   overflow: hidden;
 
+  @supports (display: grid) {
+    display: grid;
+    grid-template-columns: 203px minmax(0, 1fr);
+  }
+
   table {
     height: 100%;
     border-collapse: collapse;
@@ -191,6 +196,14 @@
 
 .schedule__table-main {
   width: calc(100% - 203px);
+
+  @supports (display: grid) {
+    width: 100%;
+  }
+
+  .no-js & {
+    overflow: auto;
+  }
 
   table {
     width: 1216px;

@@ -48,6 +48,9 @@ const fullpage = new fullpage(`#fullpage`, {
   normalScrollElements: `#menu, .contacts__map`,
   menu: `#menu`,
   scrollOverflow: true,
+  scrollOverflowOptions: {
+    eventPassthrough: `horizontal`
+  },
   lazyLoading: false,
   afterRender() {
     changeScrollBtn(scrollBtn, this);
@@ -174,6 +177,206 @@ window.onkeydown = (evt) => {
 overlay.onclick = () => {
   modalClose();
 };
+
+/* ------------------
+  Интерактивная карта
+  ------------------- */
+// Создание скрипта интерактивной карты
+const scriptEl = document.createElement(`script`);
+
+scriptEl.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyDC_DpMEN_0ha6EyLVKSj1Z-VVq_avOc3A&callback=initMap`;
+scriptEl.async = true;
+scriptEl.defer = true;
+
+// Инициализация интерактивной карты
+window.initMap = () => {
+  const contactsMap = new google.maps.Map(document.querySelector(`.contacts__map`), {
+    center: {
+      lat: 59.932004,
+      lng: 30.357496
+    },
+    zoom: 17,
+    styles: [
+      {
+        "elementType": `geometry`,
+        "stylers": [
+          {
+            "color": `#fbf5f4`
+          }
+        ]
+      },
+      {
+        "elementType": `labels.icon`,
+        "stylers": [
+          {
+            "visibility": `off`
+          }
+        ]
+      },
+      {
+        "elementType": `labels.text.fill`,
+        "stylers": [
+          {
+            "color": `#616161`
+          }
+        ]
+      },
+      {
+        "elementType": `labels.text.stroke`,
+        "stylers": [
+          {
+            "color": `#f5f5f5`
+          }
+        ]
+      },
+      {
+        "featureType": `administrative.land_parcel`,
+        "elementType": `labels.text.fill`,
+        "stylers": [
+          {
+            "color": `#bdbdbd`
+          }
+        ]
+      },
+      {
+        "featureType": `poi`,
+        "elementType": `geometry`,
+        "stylers": [
+          {
+            "color": `#eeeeee`
+          }
+        ]
+      },
+      {
+        "featureType": `poi`,
+        "elementType": `labels.text.fill`,
+        "stylers": [
+          {
+            "color": `#757575`
+          }
+        ]
+      },
+      {
+        "featureType": `poi.park`,
+        "elementType": `geometry`,
+        "stylers": [
+          {
+            "color": `#e5e5e5`
+          }
+        ]
+      },
+      {
+        "featureType": `poi.park`,
+        "elementType": `labels.text.fill`,
+        "stylers": [
+          {
+            "color": `#9e9e9e`
+          }
+        ]
+      },
+      {
+        "featureType": `road`,
+        "elementType": `geometry`,
+        "stylers": [
+          {
+            "color": `#ffffff`
+          }
+        ]
+      },
+      {
+        "featureType": `road.arterial`,
+        "elementType": `labels.text.fill`,
+        "stylers": [
+          {
+            "color": `#757575`
+          }
+        ]
+      },
+      {
+        "featureType": `road.highway`,
+        "elementType": `geometry`,
+        "stylers": [
+          {
+            "color": `#dadada`
+          }
+        ]
+      },
+      {
+        "featureType": `road.highway`,
+        "elementType": `labels.text.fill`,
+        "stylers": [
+          {
+            "color": `#616161`
+          }
+        ]
+      },
+      {
+        "featureType": `road.local`,
+        "elementType": `labels.text.fill`,
+        "stylers": [
+          {
+            "color": `#9e9e9e`
+          }
+        ]
+      },
+      {
+        "featureType": `transit.line`,
+        "elementType": `geometry`,
+        "stylers": [
+          {
+            "color": `#e5e5e5`
+          }
+        ]
+      },
+      {
+        "featureType": `transit.station`,
+        "elementType": `geometry`,
+        "stylers": [
+          {
+            "color": `#eeeeee`
+          }
+        ]
+      },
+      {
+        "featureType": `water`,
+        "elementType": `geometry`,
+        "stylers": [
+          {
+            "color": `#c9c9c9`
+          }
+        ]
+      },
+      {
+        "featureType": `water`,
+        "elementType": `labels.text.fill`,
+        "stylers": [
+          {
+            "color": `#9e9e9e`
+          }
+        ]
+      }
+    ],
+    disableDefaultUI: true
+  });
+
+  const contactsMapMarker = new google.maps.Marker({
+    position: {
+      lat: 59.931864,
+      lng: 30.357496
+    },
+    map: contactsMap,
+    icon: {
+      url: `img/contacts_map-marker.png`,
+      size: new google.maps.Size(49, 60),
+      anchor: new google.maps.Point(24, 60)
+    }
+  });
+};
+
+// Отложенное добавление скрипта карты на страницу
+window.setTimeout(() => {
+  document.head.appendChild(scriptEl);
+}, 2000);
 
 /* -----------------------
   Пользовательские функции
