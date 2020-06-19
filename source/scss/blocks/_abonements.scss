@@ -147,7 +147,7 @@
     fill: rgba($colorBlack, 0.2);
   }
 
-  span {
+  & > span {
     display: block;
     padding-right: 60px;
   }

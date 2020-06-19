@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://maps.googleapis.com" crossorigin>
     <link rel="dns-prefetch" href="https://maps.googleapis.com">
   </head>
-  <body class="page">
+  <body class="page" itemscope itemtype="http://schema.org/LocalBusiness">
     <div class="visually-hidden">
       <include src="build/img/sprite.svg"></include>
     </div>
@@ -62,10 +62,12 @@
           <source srcset="img/logo-mobile.webp" type="image/webp">
           <source srcset="img/logo-tablet.png" media="(min-width: 768px)">
           <source srcset="img/logo-mobile.png">
-          <img src="img/logo-tablet.png" alt="Логотип Центра йоги Lotos" width="49" height="30">
+          <img src="img/logo-tablet.png" alt="Логотип Центра йоги Lotos" width="49" height="30" itemprop="logo">
         </picture>
       </a>
-      <a class="header__phone" href="tel:+78123455697">+7 (812) 345-56-97</a>
+      <a class="header__phone" href="tel:+78123455697">
+        <span itemprop="telephone">+7 (812) 345-56-97</span>
+      </a>
       <div class="pagination-page header__pagination">
         <span class="pagination-page__current">01</span>
         <span class="pagination-page__total">09</span>
@@ -92,14 +94,18 @@
           <p class="section__title">Добро пожаловать</p>
           <div class="hero__wrapper">
             <div class="hero__content">
-              <h1 class="hero__title">
+              <div class="hero__heading">
                 <a class="button-arrow hero__scroll" href="#classes">
                   <svg width="6" height="6" viewBox="0 0 6 6"><use href="#icon-triangle"></use></svg>
                   <span>Читать далее</span>
                 </a>
-                <span>Центр йоги</span>
-                Lotos
-              </h1>
+                <h1 class="hero__title" itemprop="name">
+                  <span>Центр йоги</span>
+                  Lotos
+                </h1>
+              </div>
+              <meta itemprop="image" content="img/hero_image-desktop.png">
+              <meta itemprop="url" content="https://koshikishi.github.io/lotos/">
               <a class="hero__invite" href="#!">
                 <svg width="16.688" height="16.688" viewBox="0 0 16.688 16.688"><use href="#icon-plus"></use></svg>
                 Приглашаем вас и ваших друзей на бесплатное пробное занятие
@@ -244,7 +250,7 @@
           <h2 class="section__title">Преподаватели</h2>
           <div class="coaches__wrapper swiper-container">
             <div class="coaches__list swiper-wrapper">
-              <div class="coaches__item swiper-slide">
+              <div class="coaches__item swiper-slide h-card vcard" itemprop="employee" itemscope itemtype="http://schema.org/Person">
                 <picture class="coaches__image">
                   <source srcset="img/coach_01-desktop.webp" media="(min-width: 1920px)" type="image/webp">
                   <source srcset="img/coach_01-tablet.webp" media="(min-width: 768px)" type="image/webp">
@@ -252,11 +258,11 @@
                   <source srcset="img/coach_01-desktop.png" media="(min-width: 1920px)">
                   <source srcset="img/coach_01-tablet.png" media="(min-width: 768px)">
                   <source srcset="img/coach_01-mobile.png">
-                  <img src="img/coach_01-desktop.png" alt="Преподаватель йоги Максим Казаков" width="397" height="803" loading="lazy">
+                  <img class="u-photo photo" src="img/coach_01-desktop.png" alt="Преподаватель йоги Максим Казаков" width="397" height="803" loading="lazy" itemprop="image">
                 </picture>
-                <h3 class="coaches__title">Максим Казаков</h3>
-                <p class="coaches__subtitle">Преподаватель йоги с 1997 года</p>
-                <div class="coaches__text">
+                <h3 class="coaches__title p-name fn" itemprop="name">Максим Казаков</h3>
+                <p class="coaches__subtitle p-note note" itemprop="disambiguatingDescription">Преподаватель йоги с 1997 года</p>
+                <div class="coaches__text" itemprop="description">
                   <p>Занимается йогой Айенгара с 1990 года. Является преподавателем йоги Айенгара с 1997 года. Имеет международный сертификат Junior I. Проводит семинары, занятия разных уровней сложностей.</p>
                   <p>В йогу привел интерес. Является одним из самых опытных преподавателей и опорой нашего центра. Все студенты любят Максима за отзывчивость и&nbsp;индивидуальный подход к каждому.</p>
                 </div>
@@ -264,7 +270,7 @@
                   <span>Записаться к тренеру</span>
                 </a>
               </div>
-              <div class="coaches__item swiper-slide">
+              <div class="coaches__item swiper-slide h-card vcard" itemprop="employee" itemscope itemtype="http://schema.org/Person">
                 <picture class="coaches__image">
                   <source srcset="img/coach_02-desktop.webp" media="(min-width: 1920px)" type="image/webp">
                   <source srcset="img/coach_02-tablet.webp" media="(min-width: 768px)" type="image/webp">
@@ -272,11 +278,11 @@
                   <source srcset="img/coach_02-desktop.png" media="(min-width: 1920px)">
                   <source srcset="img/coach_02-tablet.png" media="(min-width: 768px)">
                   <source srcset="img/coach_02-mobile.png">
-                  <img src="img/coach_02-desktop.png" alt="Преподаватель йоги Юлия Зырянова" width="397" height="803" loading="lazy">
+                  <img class="u-photo photo" src="img/coach_02-desktop.png" alt="Преподаватель йоги Юлия Зырянова" width="397" height="803" loading="lazy" itemprop="image">
                 </picture>
-                <h3 class="coaches__title">Юлия Зырянова</h3>
-                <p class="coaches__subtitle">Преподаватель йоги с 1998 года</p>
-                <div class="coaches__text">
+                <h3 class="coaches__title p-name fn" itemprop="name">Юлия Зырянова</h3>
+                <p class="coaches__subtitle p-note note" itemprop="disambiguatingDescription">Преподаватель йоги с 1998 года</p>
+                <div class="coaches__text" itemprop="description">
                   <p>Имеется спорная точка зрения, гласящая примерно следующее: действия представителей оппозиции, инициированные исключительно синтетически, ассоциативно.</p>
                   <p>И нет сомнений, что ключевые особенности структуры проекта являются только методом политического участия и заблокированы в рамках своих собственных рациональных ограничений.</p>
                 </div>
@@ -284,7 +290,7 @@
                   <span>Записаться к тренеру</span>
                 </a>
               </div>
-              <div class="coaches__item swiper-slide">
+              <div class="coaches__item swiper-slide h-card vcard" itemprop="employee" itemscope itemtype="http://schema.org/Person">
                 <picture class="coaches__image">
                   <source srcset="img/coach_03-desktop.webp" media="(min-width: 1920px)" type="image/webp">
                   <source srcset="img/coach_03-tablet.webp" media="(min-width: 768px)" type="image/webp">
@@ -292,11 +298,11 @@
                   <source srcset="img/coach_03-desktop.png" media="(min-width: 1920px)">
                   <source srcset="img/coach_03-tablet.png" media="(min-width: 768px)">
                   <source srcset="img/coach_03-mobile.png">
-                  <img src="img/coach_03-desktop.png" alt="Преподаватель йоги Настя Антипова" width="397" height="803" loading="lazy">
+                  <img class="u-photo photo" src="img/coach_03-desktop.png" alt="Преподаватель йоги Настя Антипова" width="397" height="803" loading="lazy" itemprop="image">
                 </picture>
-                <h3 class="coaches__title">Настя Антипова</h3>
-                <p class="coaches__subtitle">Преподаватель йоги с 1996 года</p>
-                <div class="coaches__text">
+                <h3 class="coaches__title p-name fn" itemprop="name">Настя Антипова</h3>
+                <p class="coaches__subtitle p-note note" itemprop="disambiguatingDescription">Преподаватель йоги с 1996 года</p>
+                <div class="coaches__text" itemprop="description">
                   <p>Таким образом, являясь всего лишь частью общей картины, представители современных социальных резервов преданы социально-демократической анафеме.</p>
                   <p>Не следует, однако, забывать, что высокотехнологичная концепция общественного уклада прекрасно подходит для реализации инновационных методов управления процессами.</p>
                 </div>
@@ -304,7 +310,7 @@
                   <span>Записаться к тренеру</span>
                 </a>
               </div>
-              <div class="coaches__item swiper-slide">
+              <div class="coaches__item swiper-slide h-card vcard" itemprop="employee" itemscope itemtype="http://schema.org/Person">
                 <picture class="coaches__image">
                   <source srcset="img/coach_04-desktop.webp" media="(min-width: 1920px)" type="image/webp">
                   <source srcset="img/coach_04-tablet.webp" media="(min-width: 768px)" type="image/webp">
@@ -312,11 +318,11 @@
                   <source srcset="img/coach_04-desktop.png" media="(min-width: 1920px)">
                   <source srcset="img/coach_04-tablet.png" media="(min-width: 768px)">
                   <source srcset="img/coach_04-mobile.png">
-                  <img src="img/coach_04-desktop.png" alt="Преподаватель йоги Ольга Ветрова" width="397" height="803" loading="lazy">
+                  <img class="u-photo photo" src="img/coach_04-desktop.png" alt="Преподаватель йоги Ольга Ветрова" width="397" height="803" loading="lazy" itemprop="image">
                 </picture>
-                <h3 class="coaches__title">Ольга Ветрова</h3>
-                <p class="coaches__subtitle">Преподаватель йоги с 1997 года</p>
-                <div class="coaches__text">
+                <h3 class="coaches__title p-name fn" itemprop="name">Ольга Ветрова</h3>
+                <p class="coaches__subtitle p-note note" itemprop="disambiguatingDescription">Преподаватель йоги с 1997 года</p>
+                <div class="coaches__text" itemprop="description">
                   <p>Идейные соображения высшего порядка, а также разбавленное изрядной долей эмпатии, рациональное мышление требует от нас анализа переосмысления внешнеэкономических политик.</p>
                   <p>Равным образом, синтетическое тестирование является качественно новой ступенью переосмысления внешнеэкономических политик и создаёт предпосылки для приоритизации разума!</p>
                 </div>
@@ -324,7 +330,7 @@
                   <span>Записаться к тренеру</span>
                 </a>
               </div>
-              <div class="coaches__item swiper-slide">
+              <div class="coaches__item swiper-slide h-card vcard" itemprop="employee" itemscope itemtype="http://schema.org/Person">
                 <picture class="coaches__image">
                   <source srcset="img/coach_05-desktop.webp" media="(min-width: 1920px)" type="image/webp">
                   <source srcset="img/coach_05-tablet.webp" media="(min-width: 768px)" type="image/webp">
@@ -332,11 +338,11 @@
                   <source srcset="img/coach_05-desktop.png" media="(min-width: 1920px)">
                   <source srcset="img/coach_05-tablet.png" media="(min-width: 768px)">
                   <source srcset="img/coach_05-mobile.png">
-                  <img src="img/coach_05-desktop.png" alt="Преподаватель йоги Катя Стреженова" width="397" height="803" loading="lazy">
+                  <img class="u-photo photo" src="img/coach_05-desktop.png" alt="Преподаватель йоги Катя Стреженова" width="397" height="803" loading="lazy" itemprop="image">
                 </picture>
-                <h3 class="coaches__title">Катя Стреженова</h3>
-                <p class="coaches__subtitle">Преподаватель йоги с 1998 года</p>
-                <div class="coaches__text">
+                <h3 class="coaches__title p-name fn" itemprop="name">Катя Стреженова</h3>
+                <p class="coaches__subtitle p-note note" itemprop="disambiguatingDescription">Преподаватель йоги с 1998 года</p>
+                <div class="coaches__text" itemprop="description">
                   <p>Значимость этих проблем настолько очевидна, что высокое качество позиционных исследований предопределяет востребованность поставленных задач.</p>
                   <p>Таким образом, новая модель организационной деятельности представляет собой интересный эксперимент проверки вывода текущих активов.</p>
                 </div>
@@ -344,7 +350,7 @@
                   <span>Записаться к тренеру</span>
                 </a>
               </div>
-              <div class="coaches__item swiper-slide">
+              <div class="coaches__item swiper-slide h-card vcard" itemprop="employee" itemscope itemtype="http://schema.org/Person">
                 <picture class="coaches__image">
                   <source srcset="img/coach_06-desktop.webp" media="(min-width: 1920px)" type="image/webp">
                   <source srcset="img/coach_06-tablet.webp" media="(min-width: 768px)" type="image/webp">
@@ -352,11 +358,11 @@
                   <source srcset="img/coach_06-desktop.png" media="(min-width: 1920px)">
                   <source srcset="img/coach_06-tablet.png" media="(min-width: 768px)">
                   <source srcset="img/coach_06-mobile.png">
-                  <img src="img/coach_06-desktop.png" alt="Преподаватель йоги Мария Жукова" width="397" height="803" loading="lazy">
+                  <img class="u-photo photo" src="img/coach_06-desktop.png" alt="Преподаватель йоги Мария Жукова" width="397" height="803" loading="lazy" itemprop="image">
                 </picture>
-                <h3 class="coaches__title">Мария Жукова</h3>
-                <p class="coaches__subtitle">Преподаватель йоги с 1996 года</p>
-                <div class="coaches__text">
+                <h3 class="coaches__title p-name fn" itemprop="name">Мария Жукова</h3>
+                <p class="coaches__subtitle p-note note" itemprop="disambiguatingDescription">Преподаватель йоги с 1996 года</p>
+                <div class="coaches__text" itemprop="description">
                   <p>Внезапно, действия представителей оппозиции формируют глобальную экономическую сеть и при этом - смешаны с не уникальными данными до степени совершенной неузнаваемости.</p>
                   <p>Как принято считать, представители современных социальных резервов, превозмогая сложившуюся непростую экономическую ситуацию, представлены в исключительно положительном свете.</p>
                 </div>
@@ -392,47 +398,71 @@
           <div class="abonements__wrapper">
             <form class="abonements__form" action="#" method="post">
               <div class="abonements__form-inner">
-                <div class="abonements__fields">
-                  <div class="abonements__field">
+                <div class="abonements__fields" itemprop="hasOfferCatalog" itemscope itemtype="http://schema.org/OfferCatalog">
+                  <div class="abonements__field h-product hproduct" itemprop="itemListElement" itemscope itemtype="http://schema.org/Offer">
                     <input class="visually-hidden" id="day1" type="radio" name="abonement" value="300" checked>
                     <label class="abonements__label" for="day1">
                       <svg width="16.688" height="16.688" viewBox="0 0 16.688 16.688"><use href="#icon-plus"></use></svg>
-                      <span>Разовое занятие <b>300</b> руб.</span>
+                      <span>
+                        <span class="p-name fn" itemprop="name">Разовое занятие</span>
+                        <b class="p-price price" itemprop="price">300</b> руб.
+                      </span>
+                      <meta itemprop="priceCurrency" content="RUB">
                     </label>
                   </div>
-                  <div class="abonements__field">
+                  <div class="abonements__field h-product hproduct" itemprop="itemListElement" itemscope itemtype="http://schema.org/Offer">
                     <input class="visually-hidden" id="month1" type="radio" name="abonement" value="2000">
                     <label class="abonements__label" for="month1">
                       <svg width="16.688" height="16.688" viewBox="0 0 16.688 16.688"><use href="#icon-plus"></use></svg>
-                      <span>Месяц занятий <b>2 000</b> руб.</span>
+                      <span>
+                        <span class="p-name fn" itemprop="name">Месяц занятий</span>
+                        <b class="p-price price" itemprop="price">2 000</b> руб.
+                      </span>
+                      <meta itemprop="priceCurrency" content="RUB">
                     </label>
                   </div>
-                  <div class="abonements__field">
+                  <div class="abonements__field h-product hproduct" itemprop="itemListElement" itemscope itemtype="http://schema.org/Offer">
                     <input class="visually-hidden" id="month2" type="radio" name="abonement" value="3500">
                     <label class="abonements__label" for="month2">
                       <svg width="16.688" height="16.688" viewBox="0 0 16.688 16.688"><use href="#icon-plus"></use></svg>
-                      <span>2 месяца занятий <b>3 500</b> руб.</span>
+                      <span>
+                        <span class="p-name fn" itemprop="name">2 месяца занятий</span>
+                        <b class="p-price price" itemprop="price">3 500</b> руб.
+                      </span>
+                      <meta itemprop="priceCurrency" content="RUB">
                     </label>
                   </div>
-                  <div class="abonements__field">
+                  <div class="abonements__field h-product hproduct" itemprop="itemListElement" itemscope itemtype="http://schema.org/Offer">
                     <input class="visually-hidden" id="month3" type="radio" name="abonement" value="4500">
                     <label class="abonements__label" for="month3">
                       <svg width="16.688" height="16.688" viewBox="0 0 16.688 16.688"><use href="#icon-plus"></use></svg>
-                      <span>3 месяца занятий <b>4 500</b> руб.</span>
+                      <span>
+                        <span class="p-name fn" itemprop="name">3 месяца занятий</span>
+                        <b class="p-price price" itemprop="price">4 500</b> руб.
+                      </span>
+                      <meta itemprop="priceCurrency" content="RUB">
                     </label>
                   </div>
-                  <div class="abonements__field">
+                  <div class="abonements__field h-product hproduct" itemprop="itemListElement" itemscope itemtype="http://schema.org/Offer">
                     <input class="visually-hidden" id="month6" type="radio" name="abonement" value="8000">
                     <label class="abonements__label" for="month6">
                       <svg width="16.688" height="16.688" viewBox="0 0 16.688 16.688"><use href="#icon-plus"></use></svg>
-                      <span>Пол года занятий <b>8 000</b> руб.</span>
+                      <span>
+                        <span class="p-name fn" itemprop="name">Пол года занятий</span>
+                        <b class="p-price price" itemprop="price">8 000</b> руб.
+                      </span>
+                      <meta itemprop="priceCurrency" content="RUB">
                     </label>
                   </div>
-                  <div class="abonements__field">
+                  <div class="abonements__field h-product hproduct" itemprop="itemListElement" itemscope itemtype="http://schema.org/Offer">
                     <input class="visually-hidden" id="year1" type="radio" name="abonement" value="14000">
                     <label class="abonements__label" for="year1">
                       <svg width="16.688" height="16.688" viewBox="0 0 16.688 16.688"><use href="#icon-plus"></use></svg>
-                      <span>Год занятий <b>14 000</b> руб.</span>
+                      <span>
+                        <span class="p-name fn" itemprop="name">Год занятий</span>
+                        <b class="p-price price" itemprop="price">14 000</b> руб.
+                      </span>
+                      <meta itemprop="priceCurrency" content="RUB">
                     </label>
                   </div>
                 </div>
@@ -559,125 +589,145 @@
                 </table>
               </div>
             </div>
+            <meta itemprop="openingHours" content="Mo-Su 08:00-18:25">
           </div>
         </div>
       </section>
       <section class="section reviews" id="reviews">
         <div class="section__wrapper">
           <h2 class="section__title">Отзывы</h2>
+          <span itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+            <meta itemprop="ratingValue" content="5">
+            <meta itemprop="reviewCount" content="5">
+          </span>
           <div class="reviews__wrapper swiper-container">
             <div class="reviews__list swiper-wrapper">
-              <div class="reviews__item swiper-slide">
-                <div class="reviews__author">
+              <div class="reviews__item swiper-slide h-review hreview" itemprop="review" itemscope itemtype="http://schema.org/Review">
+                <div class="reviews__author p-author reviewer h-card vcard" itemprop="author" itemscope itemtype="http://schema.org/Person">
                   <picture class="reviews__photo">
                     <source srcset="img/review_author-01-desktop.webp" media="(min-width: 1920px)" type="image/webp">
                     <source srcset="img/review_author-01-mobile.webp" type="image/webp">
                     <source srcset="img/review_author-01-desktop.jpg" media="(min-width: 1920px)">
                     <source srcset="img/review_author-01-mobile.jpg">
-                    <img src="img/review_author-01-desktop.jpg" alt="Автор отзыва Жанна Блиц" width="180" height="180" loading="lazy">
+                    <img class="u-photo photo" src="img/review_author-01-desktop.jpg" alt="Автор отзыва Жанна Блиц" width="180" height="180" loading="lazy" itemprop="image">
                   </picture>
                   <div class="reviews__heading">
-                    <h3 class="reviews__name">Жанна Блиц</h3>
+                    <h3 class="reviews__name p-name fn" itemprop="name">Жанна Блиц</h3>
                     <p class="reviews__age">32 года</p>
                   </div>
                 </div>
-                <div class="reviews__text">
-                  <p>Не знаю, как остальные, но после занятий йогой хочется начать новую здоровую жизнь, хочется поесть овощей и фруктов и поднять свой иммунитет. Теперь для меня день занятий йогой — это день здоровья.</p>
+                <div class="reviews__text e-content description" itemprop="reviewBody">
+                  <p>Не знаю, как остальные, но после <span class="p-item h-item item p-name fn">занятий йогой</span> хочется начать новую здоровую жизнь, хочется поесть овощей и фруктов и поднять свой иммунитет. Теперь для меня день занятий йогой — это день здоровья.</p>
                   <p>После упорных занятий я стала меньше болеть, и поняла, в&nbsp;чем смысл всех упражнений. Позы получаются элегантно, и&nbsp;не больно только тогда, когда не прилагаешь усилия, а&nbsp;остаёшься расслабленным на протяжении всего урока.</p>
-                  <a class="reviews__link-more" href="#!">Читать полностью</a>
+                  <a class="reviews__link-more u-url url" href="#!" itemprop="url">Читать полностью</a>
                 </div>
+                <span itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
+                  <meta itemprop="ratingValue" content="5">
+                </span>
                 <a class="button button--plus" href="#!">
                   <span>Попробовать тоже</span>
                 </a>
               </div>
-              <div class="reviews__item swiper-slide">
-                <div class="reviews__author">
+              <div class="reviews__item swiper-slide h-review hreview" itemprop="review" itemscope itemtype="http://schema.org/Review">
+                <div class="reviews__author p-author reviewer h-card vcard" itemprop="author" itemscope itemtype="http://schema.org/Person">
                   <picture class="reviews__photo">
                     <source srcset="img/review_author-02-desktop.webp" media="(min-width: 1920px)" type="image/webp">
                     <source srcset="img/review_author-02-mobile.webp" type="image/webp">
                     <source srcset="img/review_author-02-desktop.jpg" media="(min-width: 1920px)">
                     <source srcset="img/review_author-02-mobile.jpg">
-                    <img src="img/review_author-02-desktop.jpg" alt="Автор отзыва Арина Наумова" width="180" height="180" loading="lazy">
+                    <img class="u-photo photo" src="img/review_author-02-desktop.jpg" alt="Автор отзыва Арина Наумова" width="180" height="180" loading="lazy" itemprop="image">
                   </picture>
                   <div class="reviews__heading">
-                    <h3 class="reviews__name">Арина Наумова</h3>
+                    <h3 class="reviews__name p-name fn" itemprop="name">Арина Наумова</h3>
                     <p class="reviews__age">34 года</p>
                   </div>
                 </div>
-                <div class="reviews__text">
-                  <p>И нет сомнений, что ключевые особенности структуры проекта являются только методом политического участия и заблокированы в рамках своих собственных рациональных ограничений.</p>
+                <div class="reviews__text e-content description" itemprop="reviewBody">
+                  <p>И нет сомнений, что ключевые особенности <span class="p-item h-item item p-name fn">структуры проекта</span> являются только методом политического участия и заблокированы в рамках своих собственных рациональных ограничений.</p>
                   <p>Являясь всего лишь частью общей картины, представители современных социальных резервов преданы социально-демократической анафеме. Не следует, однако, забывать, что высокотехнологичная.</p>
-                  <a class="reviews__link-more" href="#!">Читать полностью</a>
+                  <a class="reviews__link-more u-url url" href="#!" itemprop="url">Читать полностью</a>
                 </div>
+                <span itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
+                  <meta itemprop="ratingValue" content="5">
+                </span>
                 <a class="button button--plus" href="#!">
                   <span>Попробовать тоже</span>
                 </a>
               </div>
-              <div class="reviews__item swiper-slide">
-                <div class="reviews__author">
+              <div class="reviews__item swiper-slide h-review hreview" itemprop="review" itemscope itemtype="http://schema.org/Review">
+                <div class="reviews__author p-author reviewer h-card vcard" itemprop="author" itemscope itemtype="http://schema.org/Person">
                   <picture class="reviews__photo">
                     <source srcset="img/review_author-03-desktop.webp" media="(min-width: 1920px)" type="image/webp">
                     <source srcset="img/review_author-03-mobile.webp" type="image/webp">
                     <source srcset="img/review_author-03-desktop.jpg" media="(min-width: 1920px)">
                     <source srcset="img/review_author-03-mobile.jpg">
-                    <img src="img/review_author-03-desktop.jpg" alt="Автор отзыва Виталий Коробко" width="180" height="180" loading="lazy">
+                    <img class="u-photo photo" src="img/review_author-03-desktop.jpg" alt="Автор отзыва Виталий Коробко" width="180" height="180" loading="lazy" itemprop="image">
                   </picture>
                   <div class="reviews__heading">
-                    <h3 class="reviews__name">Виталий Коробко</h3>
+                    <h3 class="reviews__name p-name fn" itemprop="name">Виталий Коробко</h3>
                     <p class="reviews__age">33 года</p>
                   </div>
                 </div>
-                <div class="reviews__text">
-                  <p>Равным образом, идейные соображения высшего порядка, а также разбавленное изрядной долей эмпатии, рациональное мышление требует от нас анализа переосмысления политик.</p>
+                <div class="reviews__text e-content description" itemprop="reviewBody">
+                  <p>Равным образом, идейные соображения высшего порядка, а также разбавленное изрядной долей эмпатии, <span class="p-item h-item item p-name fn">рациональное мышление</span> требует от нас анализа переосмысления политик.</p>
                   <p>Таким образом, высокотехнологичная концепция общественного уклада способствует повышению качества. Также как синтетическое тестирование создаёт предпосылки для приоритизации разума!</p>
-                  <a class="reviews__link-more" href="#!">Читать полностью</a>
+                  <a class="reviews__link-more u-url url" href="#!" itemprop="url">Читать полностью</a>
                 </div>
+                <span itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
+                  <meta itemprop="ratingValue" content="5">
+                </span>
                 <a class="button button--plus" href="#!">
                   <span>Попробовать тоже</span>
                 </a>
               </div>
-              <div class="reviews__item swiper-slide">
-                <div class="reviews__author">
+              <div class="reviews__item swiper-slide h-review hreview" itemprop="review" itemscope itemtype="http://schema.org/Review">
+                <div class="reviews__author p-author reviewer h-card vcard" itemprop="author" itemscope itemtype="http://schema.org/Person">
                   <picture class="reviews__photo">
                     <source srcset="img/review_author-04-desktop.webp" media="(min-width: 1920px)" type="image/webp">
                     <source srcset="img/review_author-04-mobile.webp" type="image/webp">
                     <source srcset="img/review_author-04-desktop.jpg" media="(min-width: 1920px)">
                     <source srcset="img/review_author-04-mobile.jpg">
-                    <img src="img/review_author-04-desktop.jpg" alt="Автор отзыва Елена Снежная" width="180" height="180" loading="lazy">
+                    <img class="u-photo photo" src="img/review_author-04-desktop.jpg" alt="Автор отзыва Елена Снежная" width="180" height="180" loading="lazy" itemprop="image">
                   </picture>
                   <div class="reviews__heading">
-                    <h3 class="reviews__name">Елена Снежная</h3>
+                    <h3 class="reviews__name p-name fn" itemprop="name">Елена Снежная</h3>
                     <p class="reviews__age">36 лет</p>
                   </div>
                 </div>
-                <div class="reviews__text">
-                  <p>Таким образом, значимость этих проблем настолько очевидна, что высокое качество позиционных исследований предопределяет высокую востребованность поставленных обществом задач.</p>
+                <div class="reviews__text e-content description" itemprop="reviewBody">
+                  <p>Таким образом, значимость этих проблем настолько очевидна, что высокое качество <span class="p-item h-item item p-name fn">позиционных исследований</span> предопределяет высокую востребованность поставленных обществом задач.</p>
                   <p>Внезапно, действия представителей оппозиции формируют глобальную экономическую сеть и при этом - смешаны с не уникальными данными до степени совершенной неузнаваемости.</p>
-                  <a class="reviews__link-more" href="#!">Читать полностью</a>
+                  <a class="reviews__link-more u-url url" href="#!" itemprop="url">Читать полностью</a>
                 </div>
+                <span itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
+                  <meta itemprop="ratingValue" content="5">
+                </span>
                 <a class="button button--plus" href="#!">
                   <span>Попробовать тоже</span>
                 </a>
               </div>
-              <div class="reviews__item swiper-slide">
-                <div class="reviews__author">
+              <div class="reviews__item swiper-slide h-review hreview" itemprop="review" itemscope itemtype="http://schema.org/Review">
+                <div class="reviews__author p-author reviewer h-card vcard" itemprop="author" itemscope itemtype="http://schema.org/Person">
                   <picture class="reviews__photo">
                     <source srcset="img/review_author-05-desktop.webp" media="(min-width: 1920px)" type="image/webp">
                     <source srcset="img/review_author-05-mobile.webp" type="image/webp">
                     <source srcset="img/review_author-05-desktop.jpg" media="(min-width: 1920px)">
                     <source srcset="img/review_author-05-mobile.jpg">
-                    <img src="img/review_author-05-desktop.jpg" alt="Автор отзыва Юлиана Ветрова" width="180" height="180" loading="lazy">
+                    <img class="u-photo photo" src="img/review_author-05-desktop.jpg" alt="Автор отзыва Юлиана Ветрова" width="180" height="180" loading="lazy" itemprop="image">
                   </picture>
                   <div class="reviews__heading">
-                    <h3 class="reviews__name">Юлиана Ветрова</h3>
+                    <h3 class="reviews__name p-name fn" itemprop="name">Юлиана Ветрова</h3>
                     <p class="reviews__age">34 года</p>
                   </div>
                 </div>
-                <div class="reviews__text">
+                <div class="reviews__text e-content description" itemprop="reviewBody">
                   <p>Как принято считать, представители современных социальных резервов, превозмогая сложившуюся непростую экономическую ситуацию, представлены в исключительно положительном свете.</p>
-                  <p>Каждый из нас понимает очевидную вещь: постоянный количественный рост и сфера нашей активности однозначно фиксирует необходимость поставленных обществом задач. Как принято считать, интерактивные..</p>
-                  <a class="reviews__link-more" href="#!">Читать полностью</a>
+                  <p>Каждый из нас понимает очевидную вещь: постоянный <span class="p-item h-item item p-name fn">количественный рост</span> и сфера нашей активности однозначно фиксирует необходимость поставленных обществом задач. Как принято считать, интерактивные.</p>
+                  <a class="reviews__link-more u-url url" href="#!" itemprop="url">Читать полностью</a>
                 </div>
+                <span itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
+                  <meta itemprop="ratingValue" content="5">
+                </span>
                 <a class="button button--plus" href="#!">
                   <span>Попробовать тоже</span>
                 </a>
@@ -735,16 +785,19 @@
           <div class="contacts__wrapper">
             <div class="contacts__map"></div>
             <address class="contacts__content">
-              <dl class="contacts__list">
+              <dl class="contacts__list h-card vcard" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
                 <dt class="contacts__list-title">Адрес:</dt>
-                <dd class="contacts__list-info">СПб, Невский проспект 108</dd>
+                <dd class="contacts__list-info p-adr h-adr adr">
+                  <span class="p-locality locality" itemprop="addressLocality">СПб</span>,
+                  <span class="p-street-address street-address" itemprop="streetAddress">Невский проспект 108</span>
+                </dd>
                 <dt class="contacts__list-title">Email:</dt>
                 <dd class="contacts__list-info">
-                  <a href="mailto:Lotos-yoga@gmail.com">Lotos-yoga@gmail.com</a>
+                  <a class="u-email email" href="mailto:Lotos-yoga@gmail.com" itemprop="email">Lotos-yoga@gmail.com</a>
                 </dd>
               </dl>
               <div class="contacts__links">
-                <a class="contacts__link contacts__link--location" href="https://goo.gl/maps/GHhXt7etkR9sTMeq9" target="_blank">Смотреть на карте</a>
+                <a class="contacts__link contacts__link--location" href="https://goo.gl/maps/GHhXt7etkR9sTMeq9" target="_blank" itemprop="hasMap">Смотреть на карте</a>
                 <a class="contacts__link contacts__link--envelope" href="#feedback">Оставить отзыв</a>
               </div>
               <small class="contacts__copyright">© 2018 — ООО “Центр йоги Лотос”</small>
@@ -755,8 +808,8 @@
             <div class="modal modal--hidden contacts__modal" id="feedback">
               <b class="modal__title">Для нас очень важно ваше мнение</b>
               <form class="form form--modal modal__form" action="#" method="post">
-                <input class="form__input" type="text" name="name" placeholder="Ваше имя" aria-label="Ваше имя">
-                <textarea class="form__message" name="message" placeholder="Ваш отзыв" aria-label="Ваш отзыв"></textarea>
+                <input class="form__input" type="text" name="name" placeholder="Ваше имя" aria-label="Ваше имя" required>
+                <textarea class="form__message" name="message" placeholder="Ваш отзыв" aria-label="Ваш отзыв" required></textarea>
                 <button class="button button--envelope form__button" type="submit">
                   <span>Отправить отзыв</span>
                 </button>

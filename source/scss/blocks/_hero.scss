@@ -73,11 +73,24 @@
   }
 }
 
-.hero__title {
+.hero__heading {
   position: relative;
-  margin-top: 0;
   margin-bottom: -1px;
   padding-left: 7px;
+
+  @media (min-width: 768px) {
+    margin-bottom: -11px;
+  }
+
+  @media (min-width: 1920px) {
+    margin-bottom: -6px;
+    padding-left: 11px;
+  }
+}
+
+.hero__title {
+  margin-top: 0;
+  margin-bottom: 0;
   font-weight: $fontWeightMedium;
   font-size: $fontSizeTitleHeroMobile;
   line-height: $lineHeightNormal;
@@ -108,7 +121,6 @@
   }
 
   @media (min-width: 768px) {
-    margin-bottom: -11px;
     font-size: $fontSizeTitleHeroTablet;
 
     span {
@@ -119,8 +131,6 @@
   }
 
   @media (min-width: 1920px) {
-    margin-bottom: -6px;
-    padding-left: 11px;
     font-size: $fontSizeTitleHeroDesktop;
     letter-spacing: normal;
 
