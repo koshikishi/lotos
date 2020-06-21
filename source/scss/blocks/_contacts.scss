@@ -177,20 +177,17 @@
     width: 30px;
     height: 30px;
     background:
-      center no-repeat,
+      center / 14px no-repeat,
       $gradientVertical;
     border-radius: 50%;
   }
 
-  @each $icon, $size in location 14px, envelope 14px {
+  @each $icon in location, envelope {
     &--#{$icon} {
       &::before {
         background-image:
           url("../img/icon_#{$icon}.svg"),
           $gradientVertical;
-        background-size:
-          $size,
-          auto;
       }
     }
   }
