@@ -67,6 +67,18 @@
     box-shadow: none;
   }
 
+  .swiper-slide & {
+    box-shadow: none;
+  }
+
+  .swiper-slide-active & {
+    box-shadow: 0 0 50px rgba($colorBlack, 0.1);
+
+    &:active {
+      box-shadow: none;
+    }
+  }
+
   .form--modal & {
     display: block;
     margin-right: auto;
