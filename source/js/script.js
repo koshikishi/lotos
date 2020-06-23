@@ -31,6 +31,8 @@ for (let i = 0; i < menuLinks.length; i++) {
 /* ----------------------
   Полноэкранная прокрутка
   ----------------------- */
+let isContactsMapLoaded = false;
+
 // Замена id элементов на data-атрибут для fullPage.js
 const sections = document.querySelectorAll(`.section`);
 
@@ -61,6 +63,17 @@ const fullpage = new fullpage(`#fullpage`, {
     changeScrollBtn(scrollBtn, destination);
 
     document.querySelector(`.pagination-page__current`).textContent = addLeadingZero(destination.index + 1);
+
+    // Отложенное добавление скрипта интерактивной карты
+    if (!isContactsMapLoaded && destination.index > sections.length - 3) {
+      const scriptEl = document.createElement(`script`);
+
+      scriptEl.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyDC_DpMEN_0ha6EyLVKSj1Z-VVq_avOc3A&callback=initMap`;
+      scriptEl.async = true;
+      scriptEl.defer = true;
+
+      document.head.appendChild(scriptEl);
+    }
   }
 });
 
@@ -181,15 +194,9 @@ overlay.onclick = () => {
 /* ------------------
   Интерактивная карта
   ------------------- */
-// Создание скрипта интерактивной карты
-const scriptEl = document.createElement(`script`);
-
-scriptEl.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyDC_DpMEN_0ha6EyLVKSj1Z-VVq_avOc3A&callback=initMap`;
-scriptEl.async = true;
-scriptEl.defer = true;
-
-// Инициализация интерактивной карты
 window.initMap = () => {
+  isContactsMapLoaded = true;
+
   const contactsMap = new google.maps.Map(document.querySelector(`.contacts__map`), {
     center: {
       lat: 59.932004,
@@ -372,11 +379,6 @@ window.initMap = () => {
     }
   });
 };
-
-// Отложенное добавление скрипта карты на страницу
-window.setTimeout(() => {
-  document.head.appendChild(scriptEl);
-}, 2000);
 
 /* -----------------------
   Пользовательские функции
