@@ -38,7 +38,7 @@
     "scss-resets": "^0.5.2"
   },
   "dependencies": {
-    "fullpage.js": "^3.0.8",
+    "fullpage.js": "^4.0.5",
     "scrollbooster": "^3.0.2",
     "swiper": "^6.5.1"
   }
